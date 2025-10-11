@@ -25,3 +25,4 @@ E:\ProductManagementWindowsForms\ProductManagementWindowsForms\obj\Debug\net8.0-
 E:\ProductManagementWindowsForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.PL.MainForm.resources
 E:\ProductManagementWindowsForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.Properties.Resources.resources
 E:\ProductManagementWindowsForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.PL.AddProductForm.resources
+E:\ProductManagementWindowsForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.sourcelink.json

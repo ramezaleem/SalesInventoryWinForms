@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "E:\\ProductManagementWindowsForms\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|e:\\productmanagementwindowsforms\\productmanagementwindowsforms\\pl\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|e:\\productmanagementwindowsforms\\productmanagementwindowsforms\\dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|e:\\productmanagementwindowsforms\\productmanagementwindowsforms\\bl\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\bl\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|e:\\productmanagementwindowsforms\\productmanagementwindowsforms\\pl\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -14,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataAccessLayer.cs",
+              "DocumentMoniker": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\DAL\\DataAccessLayer.cs",
+              "RelativeDocumentMoniker": "ProductManagementWindowsForms\\DAL\\DataAccessLayer.cs",
+              "ToolTip": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\DAL\\DataAccessLayer.cs",
+              "RelativeToolTip": "ProductManagementWindowsForms\\DAL\\DataAccessLayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:04:30.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Products.cs",
+              "DocumentMoniker": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\BL\\Products.cs",
+              "RelativeDocumentMoniker": "ProductManagementWindowsForms\\BL\\Products.cs",
+              "ToolTip": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\BL\\Products.cs",
+              "RelativeToolTip": "ProductManagementWindowsForms\\BL\\Products.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T14:52:25.645Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -43,13 +81,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AddProductForm.cs",
+              "DocumentMoniker": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\PL\\AddProductForm.cs",
+              "RelativeDocumentMoniker": "ProductManagementWindowsForms\\PL\\AddProductForm.cs",
+              "ToolTip": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\PL\\AddProductForm.cs",
+              "RelativeToolTip": "ProductManagementWindowsForms\\PL\\AddProductForm.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwDQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T14:45:22.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AddProductForm.cs [Design]",
               "DocumentMoniker": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\PL\\AddProductForm.cs",
               "RelativeDocumentMoniker": "ProductManagementWindowsForms\\PL\\AddProductForm.cs",
               "ToolTip": "E:\\ProductManagementWindowsForms\\ProductManagementWindowsForms\\PL\\AddProductForm.cs [Design]",
               "RelativeToolTip": "ProductManagementWindowsForms\\PL\\AddProductForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T13:00:25.73Z",
+              "WhenOpened": "2025-10-11T14:02:09.979Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -34,17 +34,17 @@ partial class AddProductForm
         label4 = new Label();
         label5 = new Label();
         label6 = new Label();
-        comboBox1 = new ComboBox();
-        textBox1 = new TextBox();
-        textBox2 = new TextBox();
-        textBox3 = new TextBox();
-        textBox4 = new TextBox();
-        pictureBox1 = new PictureBox();
+        cmbCategories = new ComboBox();
+        txtRef = new TextBox();
+        txtDesc = new TextBox();
+        txtQuantity = new TextBox();
+        txtPrice = new TextBox();
+        productImageBox = new PictureBox();
         browseFilesBtn = new Button();
         groupBox1 = new GroupBox();
         cancelBtn = new Button();
-        loginBtn = new Button();
-        ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+        okBtn = new Button();
+        ((System.ComponentModel.ISupportInitialize)productImageBox).BeginInit();
         groupBox1.SuspendLayout();
         SuspendLayout();
         // 
@@ -104,53 +104,54 @@ partial class AddProductForm
         label6.Text = "صورة المنتوج :";
         label6.Click += label6_Click;
         // 
-        // comboBox1
+        // cmbCategories
         // 
-        comboBox1.FormattingEnabled = true;
-        comboBox1.Location = new Point(220, 14);
-        comboBox1.Name = "comboBox1";
-        comboBox1.Size = new Size(208, 25);
-        comboBox1.TabIndex = 6;
+        cmbCategories.DropDownStyle = ComboBoxStyle.DropDownList;
+        cmbCategories.FormattingEnabled = true;
+        cmbCategories.Location = new Point(220, 14);
+        cmbCategories.Name = "cmbCategories";
+        cmbCategories.Size = new Size(208, 25);
+        cmbCategories.TabIndex = 6;
         // 
-        // textBox1
+        // txtRef
         // 
-        textBox1.Location = new Point(220, 54);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(208, 25);
-        textBox1.TabIndex = 7;
+        txtRef.Location = new Point(220, 54);
+        txtRef.Name = "txtRef";
+        txtRef.Size = new Size(208, 25);
+        txtRef.TabIndex = 7;
         // 
-        // textBox2
+        // txtDesc
         // 
-        textBox2.Location = new Point(220, 99);
-        textBox2.Multiline = true;
-        textBox2.Name = "textBox2";
-        textBox2.ScrollBars = ScrollBars.Vertical;
-        textBox2.Size = new Size(208, 64);
-        textBox2.TabIndex = 8;
+        txtDesc.Location = new Point(220, 99);
+        txtDesc.Multiline = true;
+        txtDesc.Name = "txtDesc";
+        txtDesc.ScrollBars = ScrollBars.Vertical;
+        txtDesc.Size = new Size(208, 64);
+        txtDesc.TabIndex = 8;
         // 
-        // textBox3
+        // txtQuantity
         // 
-        textBox3.Location = new Point(221, 174);
-        textBox3.Name = "textBox3";
-        textBox3.Size = new Size(208, 25);
-        textBox3.TabIndex = 9;
+        txtQuantity.Location = new Point(221, 174);
+        txtQuantity.Name = "txtQuantity";
+        txtQuantity.Size = new Size(208, 25);
+        txtQuantity.TabIndex = 9;
         // 
-        // textBox4
+        // txtPrice
         // 
-        textBox4.Location = new Point(221, 220);
-        textBox4.Name = "textBox4";
-        textBox4.Size = new Size(208, 25);
-        textBox4.TabIndex = 10;
-        textBox4.TextChanged += textBox4_TextChanged;
+        txtPrice.Location = new Point(221, 220);
+        txtPrice.Name = "txtPrice";
+        txtPrice.Size = new Size(208, 25);
+        txtPrice.TabIndex = 10;
+        txtPrice.TextChanged += textBox4_TextChanged;
         // 
-        // pictureBox1
+        // productImageBox
         // 
-        pictureBox1.Location = new Point(221, 270);
-        pictureBox1.Name = "pictureBox1";
-        pictureBox1.Size = new Size(208, 135);
-        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-        pictureBox1.TabIndex = 11;
-        pictureBox1.TabStop = false;
+        productImageBox.Location = new Point(221, 270);
+        productImageBox.Name = "productImageBox";
+        productImageBox.Size = new Size(208, 135);
+        productImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
+        productImageBox.TabIndex = 11;
+        productImageBox.TabStop = false;
         // 
         // browseFilesBtn
         // 
@@ -167,14 +168,14 @@ partial class AddProductForm
         // groupBox1
         // 
         groupBox1.Controls.Add(cancelBtn);
-        groupBox1.Controls.Add(loginBtn);
+        groupBox1.Controls.Add(okBtn);
         groupBox1.Controls.Add(browseFilesBtn);
-        groupBox1.Controls.Add(pictureBox1);
-        groupBox1.Controls.Add(textBox4);
-        groupBox1.Controls.Add(textBox3);
-        groupBox1.Controls.Add(textBox2);
-        groupBox1.Controls.Add(textBox1);
-        groupBox1.Controls.Add(comboBox1);
+        groupBox1.Controls.Add(productImageBox);
+        groupBox1.Controls.Add(txtPrice);
+        groupBox1.Controls.Add(txtQuantity);
+        groupBox1.Controls.Add(txtDesc);
+        groupBox1.Controls.Add(txtRef);
+        groupBox1.Controls.Add(cmbCategories);
         groupBox1.Controls.Add(label6);
         groupBox1.Controls.Add(label5);
         groupBox1.Controls.Add(label4);
@@ -202,18 +203,19 @@ partial class AddProductForm
         cancelBtn.Text = "إلغاء";
         cancelBtn.UseVisualStyleBackColor = false;
         // 
-        // loginBtn
+        // okBtn
         // 
-        loginBtn.BackColor = Color.FromArgb(128, 255, 128);
-        loginBtn.FlatStyle = FlatStyle.Popup;
-        loginBtn.ForeColor = Color.White;
-        loginBtn.ImageAlign = ContentAlignment.BottomLeft;
-        loginBtn.Location = new Point(115, 447);
-        loginBtn.Name = "loginBtn";
-        loginBtn.Size = new Size(75, 33);
-        loginBtn.TabIndex = 13;
-        loginBtn.Text = "موافق";
-        loginBtn.UseVisualStyleBackColor = false;
+        okBtn.BackColor = Color.FromArgb(128, 255, 128);
+        okBtn.FlatStyle = FlatStyle.Popup;
+        okBtn.ForeColor = Color.White;
+        okBtn.ImageAlign = ContentAlignment.BottomLeft;
+        okBtn.Location = new Point(115, 447);
+        okBtn.Name = "okBtn";
+        okBtn.Size = new Size(75, 33);
+        okBtn.TabIndex = 13;
+        okBtn.Text = "موافق";
+        okBtn.UseVisualStyleBackColor = false;
+        okBtn.Click += okBtn_Click;
         // 
         // AddProductForm
         // 
@@ -226,7 +228,7 @@ partial class AddProductForm
         RightToLeftLayout = true;
         StartPosition = FormStartPosition.CenterScreen;
         Text = "إضافة منتج جديد";
-        ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)productImageBox).EndInit();
         groupBox1.ResumeLayout(false);
         groupBox1.PerformLayout();
         ResumeLayout(false);
@@ -240,14 +242,14 @@ partial class AddProductForm
     private Label label4;
     private Label label5;
     private Label label6;
-    private ComboBox comboBox1;
-    private TextBox textBox1;
-    private TextBox textBox2;
-    private TextBox textBox3;
-    private TextBox textBox4;
-    private PictureBox pictureBox1;
+    private ComboBox cmbCategories;
+    private TextBox txtRef;
+    private TextBox txtDesc;
+    private TextBox txtQuantity;
+    private TextBox txtPrice;
+    private PictureBox productImageBox;
     private Button browseFilesBtn;
     private GroupBox groupBox1;
     private Button cancelBtn;
-    private Button loginBtn;
+    private Button okBtn;
 }

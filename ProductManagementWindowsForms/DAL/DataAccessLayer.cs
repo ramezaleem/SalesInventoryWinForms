@@ -24,14 +24,19 @@ internal class DataAccessLayer
 
     public DataTable SelectData ( string storedProcedure, SqlParameter[] parameters )
     {
+        Open();
         SqlCommand command = new SqlCommand();
         command.Connection = _sqlConnection;
         command.CommandType = CommandType.StoredProcedure;
         command.CommandText = storedProcedure;
 
-        for (int i = 0 ; i < parameters.Length ; i++)
+
+        if (parameters != null)
         {
-            command.Parameters.Add(parameters[i]);
+            for (int i = 0 ; i < parameters.Length ; i++)
+            {
+                command.Parameters.Add(parameters[i]);
+            }
         }
 
         SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -40,6 +45,7 @@ internal class DataAccessLayer
         dataAdapter.Fill(dataTable);
         return dataTable;
     }
+
 
     // Method For Insert Update Delete Data From Database
     public void ExecuteCommand ( string storedProcedure, SqlParameter[] parameters )

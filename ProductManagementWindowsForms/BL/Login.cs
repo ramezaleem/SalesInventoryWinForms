@@ -10,11 +10,11 @@ internal class Login
         DataAccessLayer dataAccessLayer = new DataAccessLayer();
         SqlParameter[] parameters = new SqlParameter[2];
 
-        parameters[0] = new SqlParameter("@Id", SqlDbType.VarChar, 50);
+        parameters[0] = new SqlParameter("@Id", SqlDbType.NVarChar, 50);
         parameters[0].Value = Id;
 
 
-        parameters[1] = new SqlParameter("@Password", SqlDbType.VarChar, 50);
+        parameters[1] = new SqlParameter("@Password", SqlDbType.NVarChar, 50);
         parameters[1].Value = password;
 
         dataAccessLayer.Open();

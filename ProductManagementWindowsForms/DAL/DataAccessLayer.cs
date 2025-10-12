@@ -7,7 +7,7 @@ internal class DataAccessLayer
     SqlConnection _sqlConnection;
     public DataAccessLayer ()
     {
-        _sqlConnection = new SqlConnection("Data Source=RAMEZALEEM\\TRAINEE;Initial Catalog=Product_DBWinForms;Integrated Security=True;TrustServerCertificate=True;");
+        _sqlConnection = new SqlConnection("Data Source=.;Initial Catalog=Product_DBWinForms;Integrated Security=True;TrustServerCertificate=True;");
     }
 
     public void Open ()

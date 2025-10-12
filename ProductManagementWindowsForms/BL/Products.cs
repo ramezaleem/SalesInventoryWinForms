@@ -36,16 +36,16 @@ internal class Products
         sqlParameters[0] = new SqlParameter("@CategoryId", SqlDbType.Int);
         sqlParameters[0].Value = CategoryId;
 
-        sqlParameters[1] = new SqlParameter("@ProductLabel", SqlDbType.VarChar, 30);
+        sqlParameters[1] = new SqlParameter("@ProductLabel", SqlDbType.NVarChar, 30);
         sqlParameters[1].Value = ProductLabel;
 
-        sqlParameters[2] = new SqlParameter("@ProductId", SqlDbType.VarChar, 30);
+        sqlParameters[2] = new SqlParameter("@ProductId", SqlDbType.NVarChar, 30);
         sqlParameters[2].Value = ProductId;
 
         sqlParameters[3] = new SqlParameter("@Qte", SqlDbType.Int);
         sqlParameters[3].Value = Qte;
 
-        sqlParameters[4] = new SqlParameter("@Price", SqlDbType.VarChar, 50);
+        sqlParameters[4] = new SqlParameter("@Price", SqlDbType.NVarChar, 50);
         sqlParameters[4].Value = Price;
 
         sqlParameters[5] = new SqlParameter("@Image", SqlDbType.Image);
@@ -61,7 +61,7 @@ internal class Products
 
         SqlParameter[] parameters = new SqlParameter[1];
 
-        parameters[0] = new SqlParameter("@Id", SqlDbType.VarChar, 50);
+        parameters[0] = new SqlParameter("@Id", SqlDbType.NVarChar, 50);
         parameters[0].Value = Id;
 
         dataAccessLayer.ExecuteCommand("DeleteProduct", parameters);
@@ -73,7 +73,7 @@ internal class Products
         dataAccessLayer.Open();
         DataTable dataTable = new DataTable();
         SqlParameter[] parameters = new SqlParameter[1];
-        parameters[0] = new SqlParameter("@ProductId", SqlDbType.VarChar, 30);
+        parameters[0] = new SqlParameter("@ProductId", SqlDbType.NVarChar, 30);
         parameters[0].Value = Id;
 
         dataTable = dataAccessLayer.SelectData("VerifyProductId", parameters);
@@ -85,7 +85,7 @@ internal class Products
         dataAccessLayer.Open();
         DataTable dataTable = new DataTable();
         SqlParameter[] parameters = new SqlParameter[1];
-        parameters[0] = new SqlParameter("@Id", SqlDbType.VarChar, 50);
+        parameters[0] = new SqlParameter("@Id", SqlDbType.NVarChar, 50);
 
         parameters[0].Value = Id;
 

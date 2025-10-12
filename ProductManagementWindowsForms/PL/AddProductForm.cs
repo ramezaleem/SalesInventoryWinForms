@@ -1,14 +1,15 @@
 ﻿using ProductManagementWindowsForms.BL;
+using System.Data;
 
 namespace ProductManagementWindowsForms.PL;
 public partial class AddProductForm : Form
 {
-    Products _products = new Products();
+    Products product = new Products();
     public AddProductForm ()
     {
         InitializeComponent();
 
-        cmbCategories.DataSource = _products.GetAllProducts();
+        cmbCategories.DataSource = product.GetAllCategories();
         cmbCategories.DisplayMember = "Description";
         cmbCategories.ValueMember = "CategoryId";
     }
@@ -57,10 +58,30 @@ public partial class AddProductForm : Form
 
         byte[] byteImage = memoryStream.ToArray();
 
-        _products.AddProduct(Convert.ToInt32(cmbCategories.SelectedValue), txtDesc.Text,
+        product.AddProduct(Convert.ToInt32(cmbCategories.SelectedValue), txtDesc.Text,
             txtRef.Text, Convert.ToInt32(txtQuantity.Text), txtPrice.Text, byteImage);
 
         MessageBox.Show("تمت الإضافة بنجاح", "عملية الإضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+    }
+
+    private void txtRef_Validated ( object sender, EventArgs e )
+    {
+        DataTable dataTable = new DataTable();
+
+        dataTable = product.VerifyProductId(txtRef.Text);
+
+        if (dataTable.Rows.Count > 0)
+        {
+            MessageBox.Show("هذا المعرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            txtRef.Focus();
+            txtRef.SelectionStart = 0;
+            txtRef.SelectionLength = txtRef.TextLength;
+        }
+    }
+
+    private void cancelBtn_Click ( object sender, EventArgs e )
+    {
+        this.Close();
     }
 }

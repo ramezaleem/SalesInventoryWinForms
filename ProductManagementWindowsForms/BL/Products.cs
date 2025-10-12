@@ -6,6 +6,16 @@ namespace ProductManagementWindowsForms.BL;
 internal class Products
 {
     DataAccessLayer dataAccessLayer = new DataAccessLayer();
+    public DataTable GetAllCategories ()
+    {
+        dataAccessLayer.Open();
+
+        DataTable dataTable = new DataTable();
+        dataTable = dataAccessLayer.SelectData("GetAllCategories", null);
+        dataAccessLayer.CLose();
+        return dataTable;
+    }
+
     public DataTable GetAllProducts ()
     {
         dataAccessLayer.Open();
@@ -14,7 +24,6 @@ internal class Products
         dataTable = dataAccessLayer.SelectData("GetAllProducts", null);
         dataAccessLayer.CLose();
         return dataTable;
-
     }
 
     public void AddProduct ( int CategoryId, string ProductLabel, string ProductId,
@@ -45,5 +54,45 @@ internal class Products
         dataAccessLayer.ExecuteCommand("AddProduct", sqlParameters);
         dataAccessLayer.CLose();
     }
+
+    public void DeleteProduct ( string Id )
+    {
+        dataAccessLayer.Open();
+
+        SqlParameter[] parameters = new SqlParameter[1];
+
+        parameters[0] = new SqlParameter("@Id", SqlDbType.VarChar, 50);
+        parameters[0].Value = Id;
+
+        dataAccessLayer.ExecuteCommand("DeleteProduct", parameters);
+        dataAccessLayer.CLose();
+    }
+
+    public DataTable VerifyProductId ( string Id )
+    {
+        dataAccessLayer.Open();
+        DataTable dataTable = new DataTable();
+        SqlParameter[] parameters = new SqlParameter[1];
+        parameters[0] = new SqlParameter("@ProductId", SqlDbType.VarChar, 30);
+        parameters[0].Value = Id;
+
+        dataTable = dataAccessLayer.SelectData("VerifyProductId", parameters);
+        dataAccessLayer.CLose();
+        return dataTable;
+    }
+    public DataTable SearchProduct ( string Id )
+    {
+        dataAccessLayer.Open();
+        DataTable dataTable = new DataTable();
+        SqlParameter[] parameters = new SqlParameter[1];
+        parameters[0] = new SqlParameter("@Id", SqlDbType.VarChar, 50);
+
+        parameters[0].Value = Id;
+
+        dataTable = dataAccessLayer.SelectData("SearchProduct", parameters);
+        dataAccessLayer.CLose();
+        return dataTable;
+    }
+
 
 }

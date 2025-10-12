@@ -97,7 +97,7 @@ partial class AddProductForm
         // label6
         // 
         label6.AutoSize = true;
-        label6.Location = new Point(467, 270);
+        label6.Location = new Point(467, 265);
         label6.Name = "label6";
         label6.Size = new Size(90, 17);
         label6.TabIndex = 5;
@@ -118,7 +118,8 @@ partial class AddProductForm
         txtRef.Location = new Point(220, 54);
         txtRef.Name = "txtRef";
         txtRef.Size = new Size(208, 25);
-        txtRef.TabIndex = 7;
+        txtRef.TabIndex = 0;
+        txtRef.Validated += txtRef_Validated;
         // 
         // txtDesc
         // 
@@ -127,28 +128,29 @@ partial class AddProductForm
         txtDesc.Name = "txtDesc";
         txtDesc.ScrollBars = ScrollBars.Vertical;
         txtDesc.Size = new Size(208, 64);
-        txtDesc.TabIndex = 8;
+        txtDesc.TabIndex = 1;
         // 
         // txtQuantity
         // 
         txtQuantity.Location = new Point(221, 174);
         txtQuantity.Name = "txtQuantity";
         txtQuantity.Size = new Size(208, 25);
-        txtQuantity.TabIndex = 9;
+        txtQuantity.TabIndex = 2;
         // 
         // txtPrice
         // 
         txtPrice.Location = new Point(221, 220);
         txtPrice.Name = "txtPrice";
         txtPrice.Size = new Size(208, 25);
-        txtPrice.TabIndex = 10;
+        txtPrice.TabIndex = 3;
         txtPrice.TextChanged += textBox4_TextChanged;
         // 
         // productImageBox
         // 
-        productImageBox.Location = new Point(221, 270);
+        productImageBox.Image = Properties.Resources.No_Image_Available_Arabic_800x800;
+        productImageBox.Location = new Point(221, 265);
         productImageBox.Name = "productImageBox";
-        productImageBox.Size = new Size(208, 135);
+        productImageBox.Size = new Size(208, 154);
         productImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
         productImageBox.TabIndex = 11;
         productImageBox.TabStop = false;
@@ -157,10 +159,10 @@ partial class AddProductForm
         // 
         browseFilesBtn.BackColor = Color.FromArgb(255, 192, 128);
         browseFilesBtn.FlatStyle = FlatStyle.Popup;
-        browseFilesBtn.Location = new Point(221, 411);
+        browseFilesBtn.Location = new Point(221, 425);
         browseFilesBtn.Name = "browseFilesBtn";
         browseFilesBtn.Size = new Size(208, 34);
-        browseFilesBtn.TabIndex = 12;
+        browseFilesBtn.TabIndex = 4;
         browseFilesBtn.Text = "تحديد ملف الصورة";
         browseFilesBtn.UseVisualStyleBackColor = false;
         browseFilesBtn.Click += browseFilesBtn_Click;
@@ -202,6 +204,7 @@ partial class AddProductForm
         cancelBtn.TabIndex = 14;
         cancelBtn.Text = "إلغاء";
         cancelBtn.UseVisualStyleBackColor = false;
+        cancelBtn.Click += cancelBtn_Click;
         // 
         // okBtn
         // 

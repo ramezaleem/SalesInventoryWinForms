@@ -38,7 +38,8 @@ public partial class MainForm : Form
 
     private void إدارةالمنتوجاتToolStripMenuItem_Click ( object sender, EventArgs e )
     {
-
+        ProductsForm productsForm = new ProductsForm();
+        productsForm.ShowDialog();
     }
 
     private void إدارةالعملاءToolStripMenuItem_Click ( object sender, EventArgs e )

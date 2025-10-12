@@ -59,5 +59,15 @@ namespace ProductManagementWindowsForms.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap No_Image_Available_Arabic_800x800 {
+            get {
+                object obj = ResourceManager.GetObject("No_Image_Available_Arabic_800x800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

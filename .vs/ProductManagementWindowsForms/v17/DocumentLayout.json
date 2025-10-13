@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|d:\\ramez\\learning\\salesinventorywinforms\\productmanagementwindowsforms\\pl\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|d:\\ramez\\learning\\salesinventorywinforms\\productmanagementwindowsforms\\pl\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|d:\\ramez\\learning\\salesinventorywinforms\\productmanagementwindowsforms\\pl\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|d:\\ramez\\learning\\salesinventorywinforms\\productmanagementwindowsforms\\pl\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|d:\\ramez\\learning\\salesinventorywinforms\\productmanagementwindowsforms\\pl\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E924C97-C565-46BF-AB5E-10813C478764}|ReportRunner\\ReportRunner.csproj|d:\\ramez\\learning\\salesinventorywinforms\\reportrunner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E924C97-C565-46BF-AB5E-10813C478764}|ReportRunner\\ReportRunner.csproj|solutionrelative:reportrunner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|d:\\ramez\\learning\\salesinventorywinforms\\productmanagementwindowsforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|D:\\Ramez\\Learning\\SalesInventoryWinForms\\productmanagementwindowsforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|D:\\Ramez\\Learning\\SalesInventoryWinForms\\productmanagementwindowsforms\\pl\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52BD8FBA-2FD6-4E50-84B9-B605606DD89D}|ProductManagementWindowsForms\\ProductManagementWindowsForms.csproj|solutionrelative:productmanagementwindowsforms\\pl\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Categories.cs",
               "DocumentMoniker": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\PL\\Categories.cs",
               "RelativeDocumentMoniker": "ProductManagementWindowsForms\\PL\\Categories.cs",
               "ToolTip": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\PL\\Categories.cs",
               "RelativeToolTip": "ProductManagementWindowsForms\\PL\\Categories.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAiwDYAAAADAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAmwBgAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T14:22:19.532Z",
+              "WhenOpened": "2025-10-13T14:56:23.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Categories.cs [Design]",
               "DocumentMoniker": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\PL\\Categories.cs",
               "RelativeDocumentMoniker": "ProductManagementWindowsForms\\PL\\Categories.cs",
@@ -63,46 +55,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductsForm.cs",
-              "DocumentMoniker": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\PL\\ProductsForm.cs",
-              "RelativeDocumentMoniker": "ProductManagementWindowsForms\\PL\\ProductsForm.cs",
-              "ToolTip": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\PL\\ProductsForm.cs",
-              "RelativeToolTip": "ProductManagementWindowsForms\\PL\\ProductsForm.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAYwDMAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T14:00:49.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\Program.cs",
               "RelativeDocumentMoniker": "ProductManagementWindowsForms\\Program.cs",
               "ToolTip": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\Program.cs",
               "RelativeToolTip": "ProductManagementWindowsForms\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T13:58:34.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ReportRunner\\Program.cs",
-              "RelativeDocumentMoniker": "ReportRunner\\Program.cs",
-              "ToolTip": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ReportRunner\\Program.cs",
-              "RelativeToolTip": "ReportRunner\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T13:56:02.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "D:\\Ramez\\Learning\\SalesInventoryWinForms\\ProductManagementWindowsForms\\PL\\MainForm.cs",
               "RelativeDocumentMoniker": "ProductManagementWindowsForms\\PL\\MainForm.cs",

@@ -141,3 +141,4 @@ D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\bin\Debug
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\bin\Debug\net8.0-windows\zh-CHS\CrystalDecisions.Shared.resources.dll
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\bin\Debug\net8.0-windows\zh-CHT\CrystalDecisions.Shared.resources.dll
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.Reports.ProductPrintReport.resources
+D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.PL.Categories.resources

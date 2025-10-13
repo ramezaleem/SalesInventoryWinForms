@@ -3,7 +3,7 @@ public partial class MainForm : Form
 {
     private static MainForm _mainForm;
 
-    static void MainFormClosed ( object sender, FormClosedEventArgs e )
+    static void MainFormClosed(object sender, FormClosedEventArgs e)
     {
         _mainForm = null;
     }
@@ -21,7 +21,7 @@ public partial class MainForm : Form
         }
     }
 
-    public MainForm ()
+    public MainForm()
     {
         InitializeComponent();
 
@@ -36,31 +36,37 @@ public partial class MainForm : Form
 
     }
 
-    private void إدارةالمنتوجاتToolStripMenuItem_Click ( object sender, EventArgs e )
+    private void إدارةالمنتوجاتToolStripMenuItem_Click(object sender, EventArgs e)
     {
         ProductsForm productsForm = new ProductsForm();
         productsForm.ShowDialog();
     }
 
-    private void إدارةالعملاءToolStripMenuItem_Click ( object sender, EventArgs e )
+    private void إدارةالعملاءToolStripMenuItem_Click(object sender, EventArgs e)
     {
 
     }
 
-    private void MainForm_Load ( object sender, EventArgs e )
+    private void MainForm_Load(object sender, EventArgs e)
     {
 
     }
 
-    private void تسجيلالدخولToolStripMenuItem_Click ( object sender, EventArgs e )
+    private void تسجيلالدخولToolStripMenuItem_Click(object sender, EventArgs e)
     {
         LoginForm loginForm = new LoginForm();
         loginForm.ShowDialog();
     }
 
-    private void إضافةمنتججديدToolStripMenuItem_Click ( object sender, EventArgs e )
+    private void إضافةمنتججديدToolStripMenuItem_Click(object sender, EventArgs e)
     {
         AddProductForm addProductForm = new AddProductForm();
         addProductForm.ShowDialog();
+    }
+
+    private void إدارةالأصنافToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Categories categories = new Categories();
+        categories.ShowDialog();
     }
 }

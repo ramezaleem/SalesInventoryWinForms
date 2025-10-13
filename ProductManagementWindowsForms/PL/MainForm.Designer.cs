@@ -123,6 +123,7 @@ partial class MainForm
         إدارةالأصنافToolStripMenuItem.Name = "إدارةالأصنافToolStripMenuItem";
         إدارةالأصنافToolStripMenuItem.Size = new Size(180, 22);
         إدارةالأصنافToolStripMenuItem.Text = "إدارة الأصناف";
+        إدارةالأصنافToolStripMenuItem.Click += إدارةالأصنافToolStripMenuItem_Click;
         // 
         // العملاءToolStripMenuItem
         // 

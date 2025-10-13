@@ -28,80 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            txtRef = new TextBox();
-            txtDesc = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
             label3 = new Label();
+            lastBtn = new Button();
+            nextBtn = new Button();
+            previousBtn = new Button();
+            firstBtn = new Button();
+            txtDesc = new TextBox();
+            txtId = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
             groupBox2 = new GroupBox();
-            addBtn = new Button();
-            insertBtn = new Button();
-            updateBtn = new Button();
+            exitBtn = new Button();
+            exportCurrentPDFBtn = new Button();
+            exportAllPDFBtn = new Button();
+            printCurrentBtn = new Button();
+            printAllBtn = new Button();
             deleteBtn = new Button();
-            groupBox3 = new GroupBox();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
+            updateBtn = new Button();
+            insertBtn = new Button();
+            addBtn = new Button();
+            categoriesList = new DataGridView();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)categoriesList).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button4);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(lastBtn);
+            groupBox1.Controls.Add(nextBtn);
+            groupBox1.Controls.Add(previousBtn);
+            groupBox1.Controls.Add(firstBtn);
             groupBox1.Controls.Add(txtDesc);
-            groupBox1.Controls.Add(txtRef);
+            groupBox1.Controls.Add(txtId);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 29);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 239);
+            groupBox1.Size = new Size(541, 239);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "بيانات الصنف :";
             // 
-            // label1
+            // label3
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(651, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(81, 15);
-            label1.TabIndex = 0;
-            label1.Text = "معرف الصنف :";
-            label1.Click += label1_Click;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(246, 200);
+            label3.Name = "label3";
+            label3.Size = new Size(41, 17);
+            label3.TabIndex = 8;
+            label3.Text = "Label";
             // 
-            // label2
+            // lastBtn
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(651, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(81, 15);
-            label2.TabIndex = 1;
-            label2.Text = "وصف الصنف :";
-            label2.Click += label2_Click;
+            lastBtn.Location = new Point(31, 198);
+            lastBtn.Name = "lastBtn";
+            lastBtn.Size = new Size(75, 23);
+            lastBtn.TabIndex = 7;
+            lastBtn.Text = ">>||";
+            lastBtn.UseVisualStyleBackColor = true;
             // 
-            // txtRef
+            // nextBtn
             // 
-            txtRef.Location = new Point(459, 37);
-            txtRef.Name = "txtRef";
-            txtRef.ReadOnly = true;
-            txtRef.Size = new Size(156, 23);
-            txtRef.TabIndex = 2;
+            nextBtn.Location = new Point(123, 198);
+            nextBtn.Name = "nextBtn";
+            nextBtn.Size = new Size(75, 23);
+            nextBtn.TabIndex = 6;
+            nextBtn.Text = ">>";
+            nextBtn.UseVisualStyleBackColor = true;
+            // 
+            // previousBtn
+            // 
+            previousBtn.Location = new Point(341, 198);
+            previousBtn.Name = "previousBtn";
+            previousBtn.Size = new Size(75, 23);
+            previousBtn.TabIndex = 5;
+            previousBtn.Text = "<<";
+            previousBtn.UseVisualStyleBackColor = true;
+            // 
+            // firstBtn
+            // 
+            firstBtn.Location = new Point(432, 198);
+            firstBtn.Name = "firstBtn";
+            firstBtn.Size = new Size(75, 23);
+            firstBtn.TabIndex = 4;
+            firstBtn.Text = "||<<";
+            firstBtn.UseVisualStyleBackColor = true;
             // 
             // txtDesc
             // 
-            txtDesc.Location = new Point(238, 79);
+            txtDesc.Location = new Point(25, 74);
             txtDesc.Multiline = true;
             txtDesc.Name = "txtDesc";
             txtDesc.ReadOnly = true;
@@ -109,179 +130,179 @@
             txtDesc.Size = new Size(377, 82);
             txtDesc.TabIndex = 3;
             // 
-            // button1
+            // txtId
             // 
-            button1.Location = new Point(669, 196);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "||<<";
-            button1.UseVisualStyleBackColor = true;
+            txtId.Location = new Point(246, 32);
+            txtId.Name = "txtId";
+            txtId.ReadOnly = true;
+            txtId.Size = new Size(156, 23);
+            txtId.TabIndex = 2;
             // 
-            // button2
+            // label2
             // 
-            button2.Location = new Point(578, 196);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "<<";
-            button2.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(438, 78);
+            label2.Name = "label2";
+            label2.Size = new Size(81, 15);
+            label2.TabIndex = 1;
+            label2.Text = "وصف الصنف :";
+            label2.Click += label2_Click;
             // 
-            // button3
+            // label1
             // 
-            button3.Location = new Point(268, 196);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 7;
-            button3.Text = ">>||";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(360, 196);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 6;
-            button4.Text = ">>";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(483, 198);
-            label3.Name = "label3";
-            label3.Size = new Size(41, 17);
-            label3.TabIndex = 8;
-            label3.Text = "Label";
+            label1.AutoSize = true;
+            label1.Location = new Point(438, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 15);
+            label1.TabIndex = 0;
+            label1.Text = "معرف الصنف :";
+            label1.Click += label1_Click;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button9);
-            groupBox2.Controls.Add(button8);
-            groupBox2.Controls.Add(button7);
-            groupBox2.Controls.Add(button6);
-            groupBox2.Controls.Add(button5);
+            groupBox2.Controls.Add(exitBtn);
+            groupBox2.Controls.Add(exportCurrentPDFBtn);
+            groupBox2.Controls.Add(exportAllPDFBtn);
+            groupBox2.Controls.Add(printCurrentBtn);
+            groupBox2.Controls.Add(printAllBtn);
             groupBox2.Controls.Add(deleteBtn);
             groupBox2.Controls.Add(updateBtn);
             groupBox2.Controls.Add(insertBtn);
             groupBox2.Controls.Add(addBtn);
             groupBox2.Location = new Point(12, 294);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(776, 97);
+            groupBox2.Size = new Size(971, 133);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "العمليات المتاحة :";
             // 
-            // addBtn
+            // exitBtn
             // 
-            addBtn.BackColor = Color.FromArgb(128, 255, 128);
-            addBtn.Location = new Point(678, 40);
-            addBtn.Name = "addBtn";
-            addBtn.Size = new Size(82, 23);
-            addBtn.TabIndex = 9;
-            addBtn.Text = "جديد";
-            addBtn.UseVisualStyleBackColor = false;
+            exitBtn.BackColor = Color.Red;
+            exitBtn.ForeColor = Color.White;
+            exitBtn.Location = new Point(223, 73);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(181, 36);
+            exitBtn.TabIndex = 17;
+            exitBtn.Text = "خروج";
+            exitBtn.UseVisualStyleBackColor = false;
             // 
-            // insertBtn
+            // exportCurrentPDFBtn
             // 
-            insertBtn.BackColor = Color.FromArgb(255, 192, 128);
-            insertBtn.Location = new Point(597, 40);
-            insertBtn.Name = "insertBtn";
-            insertBtn.Size = new Size(75, 23);
-            insertBtn.TabIndex = 10;
-            insertBtn.Text = "إضافة";
-            insertBtn.UseVisualStyleBackColor = false;
+            exportCurrentPDFBtn.BackColor = Color.FromArgb(255, 224, 192);
+            exportCurrentPDFBtn.Location = new Point(784, 73);
+            exportCurrentPDFBtn.Name = "exportCurrentPDFBtn";
+            exportCurrentPDFBtn.Size = new Size(181, 36);
+            exportCurrentPDFBtn.TabIndex = 16;
+            exportCurrentPDFBtn.Text = "حفظ الملف الحالي في ملف PDF";
+            exportCurrentPDFBtn.UseVisualStyleBackColor = false;
             // 
-            // updateBtn
+            // exportAllPDFBtn
             // 
-            updateBtn.BackColor = Color.FromArgb(255, 255, 128);
-            updateBtn.Location = new Point(435, 40);
-            updateBtn.Name = "updateBtn";
-            updateBtn.Size = new Size(75, 23);
-            updateBtn.TabIndex = 11;
-            updateBtn.Text = "تعديل";
-            updateBtn.UseVisualStyleBackColor = false;
+            exportAllPDFBtn.BackColor = Color.FromArgb(255, 224, 192);
+            exportAllPDFBtn.Location = new Point(410, 73);
+            exportAllPDFBtn.Name = "exportAllPDFBtn";
+            exportAllPDFBtn.Size = new Size(181, 36);
+            exportAllPDFBtn.TabIndex = 15;
+            exportAllPDFBtn.Text = "حفظ كل الأصناف في ملف PDF";
+            exportAllPDFBtn.UseVisualStyleBackColor = false;
+            exportAllPDFBtn.Click += button7_Click_1;
+            // 
+            // printCurrentBtn
+            // 
+            printCurrentBtn.BackColor = Color.FromArgb(192, 192, 255);
+            printCurrentBtn.Location = new Point(597, 73);
+            printCurrentBtn.Name = "printCurrentBtn";
+            printCurrentBtn.Size = new Size(181, 36);
+            printCurrentBtn.TabIndex = 14;
+            printCurrentBtn.Text = "طباعة الصنف الحالي";
+            printCurrentBtn.UseVisualStyleBackColor = false;
+            // 
+            // printAllBtn
+            // 
+            printAllBtn.BackColor = Color.FromArgb(192, 192, 255);
+            printAllBtn.Location = new Point(36, 22);
+            printAllBtn.Name = "printAllBtn";
+            printAllBtn.Size = new Size(181, 36);
+            printAllBtn.TabIndex = 13;
+            printAllBtn.Text = "طباعة كل الأصناف";
+            printAllBtn.UseVisualStyleBackColor = false;
+            printAllBtn.Click += button5_Click;
             // 
             // deleteBtn
             // 
             deleteBtn.BackColor = Color.FromArgb(255, 192, 192);
-            deleteBtn.Location = new Point(516, 40);
+            deleteBtn.Location = new Point(223, 24);
             deleteBtn.Name = "deleteBtn";
-            deleteBtn.Size = new Size(75, 23);
+            deleteBtn.Size = new Size(181, 36);
             deleteBtn.TabIndex = 12;
             deleteBtn.Text = "حذف";
             deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
             // 
-            // groupBox3
+            // updateBtn
             // 
-            groupBox3.Location = new Point(12, 411);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(776, 158);
-            groupBox3.TabIndex = 2;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "لائحة الأصناف :";
-            groupBox3.Enter += groupBox3_Enter;
+            updateBtn.BackColor = Color.FromArgb(255, 255, 128);
+            updateBtn.Location = new Point(410, 24);
+            updateBtn.Name = "updateBtn";
+            updateBtn.Size = new Size(181, 36);
+            updateBtn.TabIndex = 11;
+            updateBtn.Text = "تعديل";
+            updateBtn.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // insertBtn
             // 
-            button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.Location = new Point(311, 40);
-            button5.Name = "button5";
-            button5.Size = new Size(118, 23);
-            button5.TabIndex = 13;
-            button5.Text = "طباعة كل الأصناف";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            insertBtn.BackColor = Color.FromArgb(255, 192, 128);
+            insertBtn.Location = new Point(597, 24);
+            insertBtn.Name = "insertBtn";
+            insertBtn.Size = new Size(181, 36);
+            insertBtn.TabIndex = 10;
+            insertBtn.Text = "إضافة";
+            insertBtn.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // addBtn
             // 
-            button6.BackColor = Color.FromArgb(192, 192, 255);
-            button6.Location = new Point(187, 40);
-            button6.Name = "button6";
-            button6.Size = new Size(118, 23);
-            button6.TabIndex = 14;
-            button6.Text = "طباعة الصنف الحالي";
-            button6.UseVisualStyleBackColor = false;
+            addBtn.BackColor = Color.FromArgb(128, 255, 128);
+            addBtn.Location = new Point(784, 22);
+            addBtn.Name = "addBtn";
+            addBtn.Size = new Size(181, 36);
+            addBtn.TabIndex = 9;
+            addBtn.Text = "جديد";
+            addBtn.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // categoriesList
             // 
-            button7.BackColor = Color.FromArgb(255, 224, 192);
-            button7.Location = new Point(0, 40);
-            button7.Name = "button7";
-            button7.Size = new Size(181, 23);
-            button7.TabIndex = 15;
-            button7.Text = "حفظ كل الأصناف في ملف PDF";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click_1;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.FromArgb(255, 224, 192);
-            button8.Location = new Point(579, 69);
-            button8.Name = "button8";
-            button8.Size = new Size(181, 28);
-            button8.TabIndex = 16;
-            button8.Text = "حفظ الملف الحالي في ملف PDF";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.Red;
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(490, 69);
-            button9.Name = "button9";
-            button9.Size = new Size(83, 28);
-            button9.TabIndex = 17;
-            button9.Text = "خروج";
-            button9.UseVisualStyleBackColor = false;
+            categoriesList.AllowUserToAddRows = false;
+            categoriesList.AllowUserToDeleteRows = false;
+            categoriesList.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(224, 224, 224);
+            categoriesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            categoriesList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            categoriesList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            categoriesList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            categoriesList.DefaultCellStyle = dataGridViewCellStyle2;
+            categoriesList.Location = new Point(559, 26);
+            categoriesList.MultiSelect = false;
+            categoriesList.Name = "categoriesList";
+            categoriesList.RowHeadersVisible = false;
+            categoriesList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            categoriesList.Size = new Size(424, 242);
+            categoriesList.TabIndex = 2;
+            categoriesList.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Categories
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 586);
-            Controls.Add(groupBox3);
+            ClientSize = new Size(995, 428);
+            Controls.Add(categoriesList);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             MaximizeBox = false;
@@ -295,6 +316,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)categoriesList).EndInit();
             ResumeLayout(false);
         }
 
@@ -304,22 +326,22 @@
         private Label label2;
         private Label label1;
         private TextBox txtDesc;
-        private TextBox txtRef;
+        private TextBox txtId;
         private Label label3;
-        private Button button3;
-        private Button button4;
-        private Button button2;
-        private Button button1;
+        private Button lastBtn;
+        private Button nextBtn;
+        private Button previousBtn;
+        private Button firstBtn;
         private GroupBox groupBox2;
         private Button updateBtn;
         private Button insertBtn;
         private Button addBtn;
         private Button deleteBtn;
-        private GroupBox groupBox3;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
+        private Button printAllBtn;
+        private Button printCurrentBtn;
+        private Button exportAllPDFBtn;
+        private Button exportCurrentPDFBtn;
+        private Button exitBtn;
+        private DataGridView categoriesList;
     }
 }

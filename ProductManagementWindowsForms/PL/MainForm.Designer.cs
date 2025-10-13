@@ -26,7 +26,7 @@ partial class MainForm
     /// Required method for Designer support - do not modify
     /// the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent ()
+    private void InitializeComponent()
     {
         menuStrip1 = new MenuStrip();
         ملفToolStripMenuItem = new ToolStripMenuItem();
@@ -38,7 +38,6 @@ partial class MainForm
         إضافةمنتججديدToolStripMenuItem = new ToolStripMenuItem();
         إدارةالمنتوجاتToolStripMenuItem = new ToolStripMenuItem();
         toolStripSeparator1 = new ToolStripSeparator();
-        إضافةصنفجديدToolStripMenuItem = new ToolStripMenuItem();
         إدارةالأصنافToolStripMenuItem = new ToolStripMenuItem();
         العملاءToolStripMenuItem = new ToolStripMenuItem();
         إضافةعميلجديدToolStripMenuItem = new ToolStripMenuItem();
@@ -95,7 +94,7 @@ partial class MainForm
         // 
         // المنتوجاتToolStripMenuItem
         // 
-        المنتوجاتToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { إضافةمنتججديدToolStripMenuItem, إدارةالمنتوجاتToolStripMenuItem, toolStripSeparator1, إضافةصنفجديدToolStripMenuItem, إدارةالأصنافToolStripMenuItem });
+        المنتوجاتToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { إضافةمنتججديدToolStripMenuItem, إدارةالمنتوجاتToolStripMenuItem, toolStripSeparator1, إدارةالأصنافToolStripMenuItem });
         المنتوجاتToolStripMenuItem.Name = "المنتوجاتToolStripMenuItem";
         المنتوجاتToolStripMenuItem.Size = new Size(68, 20);
         المنتوجاتToolStripMenuItem.Text = "المنتوجات";
@@ -118,12 +117,6 @@ partial class MainForm
         // 
         toolStripSeparator1.Name = "toolStripSeparator1";
         toolStripSeparator1.Size = new Size(177, 6);
-        // 
-        // إضافةصنفجديدToolStripMenuItem
-        // 
-        إضافةصنفجديدToolStripMenuItem.Name = "إضافةصنفجديدToolStripMenuItem";
-        إضافةصنفجديدToolStripMenuItem.Size = new Size(180, 22);
-        إضافةصنفجديدToolStripMenuItem.Text = "إضافة صنف جديد";
         // 
         // إدارةالأصنافToolStripMenuItem
         // 
@@ -213,7 +206,6 @@ partial class MainForm
     private ToolStripMenuItem إدارةالمنتوجاتToolStripMenuItem;
     private ToolStripMenuItem إضافةمنتججديدToolStripMenuItem;
     private ToolStripSeparator toolStripSeparator1;
-    private ToolStripMenuItem إضافةصنفجديدToolStripMenuItem;
     private ToolStripMenuItem إدارةالأصنافToolStripMenuItem;
     private ToolStripMenuItem إضافةعميلجديدToolStripMenuItem;
     private ToolStripMenuItem إدارةالعملاءToolStripMenuItem;

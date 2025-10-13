@@ -47,6 +47,22 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "CrystalDecisions.CrystalReports.Engine": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "CrystalDecisions.Shared": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "CrystalDecisions.Windows.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "CrystalReports.ReportSource": {
+              "target": "Package",
+              "version": "[13.0.4003, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.9.0, )"

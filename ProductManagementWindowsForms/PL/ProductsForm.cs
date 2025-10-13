@@ -46,7 +46,7 @@ public partial class ProductsForm : Form
 
     private void button7_Click(object sender, EventArgs e)
     {
-
+        this.Close();
     }
 
     private void searchTxtBox_TextChanged(object sender, EventArgs e)

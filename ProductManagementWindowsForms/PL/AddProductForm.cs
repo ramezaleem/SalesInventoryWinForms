@@ -59,7 +59,6 @@ public partial class AddProductForm : Form
     {
         try
         {
-            // تحويل الصورة إلى Byte[]
             MemoryStream memoryStream = new MemoryStream();
             productImageBox.Image.Save(memoryStream, productImageBox.Image.RawFormat);
             byte[] byteImage = memoryStream.ToArray();

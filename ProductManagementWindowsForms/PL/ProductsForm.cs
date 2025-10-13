@@ -30,7 +30,9 @@ public partial class ProductsForm : Form
     {
         AddProductForm addProductForm = new AddProductForm();
         addProductForm.ShowDialog();
+        dataGridView1.DataSource = _products.GetAllProducts();
     }
+
 
     private void groupBox2_Enter(object sender, EventArgs e)
     {
@@ -59,19 +61,19 @@ public partial class ProductsForm : Form
     {
         if (MessageBox.Show("هل تريد حذف المنتوج المحدد؟", "حذف المنتوج", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
         {
-            string productId = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            string productId = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             _products.DeleteProduct(productId);
 
             MessageBox.Show("تمت عملية الحذف بنجاح", "حذف", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            dataGridView1.DataSource = _products.GetAllProducts();
         }
         else
         {
             MessageBox.Show("تم إلغاء عملية الحذف", "حذف", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
-
     }
+
     private void button5_Click(object sender, EventArgs e)
     {
         AddProductForm addProduct = new AddProductForm();
@@ -87,12 +89,35 @@ public partial class ProductsForm : Form
             addProduct.Text = "تحديث المنتوج : " + dataGridView1.CurrentRow.Cells[1].Value.ToString();
             addProduct.okBtn.Text = "تحديث";
             addProduct.state = "update";
-
             addProduct.txtRef.ReadOnly = true;
+
+            try
+            {
+                byte[] imageData = (byte[])_products.GetProductImage(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()).Rows[0][0];
+
+                if (imageData != null && imageData.Length > 0)
+                {
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        addProduct.productImageBox.Image = Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    addProduct.productImageBox.Image = null;
+                }
+            }
+            catch
+            {
+                addProduct.productImageBox.Image = null;
+            }
         }
 
         addProduct.ShowDialog();
+        dataGridView1.DataSource = _products.GetAllProducts();
     }
+
+
 
 
 

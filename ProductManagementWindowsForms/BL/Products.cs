@@ -54,6 +54,35 @@ internal class Products
         dataAccessLayer.ExecuteCommand("AddProduct", sqlParameters);
         dataAccessLayer.CLose();
     }
+    public void UpdateProduct(Int32 CategoryId, String ProductLabel, String ProductId, Int32 Qte, String Price, Byte[] img)
+    {
+        dataAccessLayer.Open();
+
+        SqlParameter[] param = new SqlParameter[6];
+
+        param[0] = new SqlParameter("@ProductId", SqlDbType.NVarChar, 30);
+        param[0].Value = ProductId;
+
+        param[1] = new SqlParameter("@ProductLabel", SqlDbType.NVarChar, 30);
+        param[1].Value = ProductLabel;
+
+        param[2] = new SqlParameter("@Qte_In_Stock", SqlDbType.Int);
+        param[2].Value = Qte;
+
+        param[3] = new SqlParameter("@price", SqlDbType.NVarChar, 30);
+        param[3].Value = Price;
+
+        param[4] = new SqlParameter("@ProductImage", SqlDbType.Image);
+        param[4].Value = img;
+
+        param[5] = new SqlParameter("@CategoryId", SqlDbType.Int);
+        param[5].Value = CategoryId;
+
+        dataAccessLayer.ExecuteCommand("UpdateProduct", param);
+
+        dataAccessLayer.CLose();
+    }
+
 
     public void DeleteProduct ( string Id )
     {

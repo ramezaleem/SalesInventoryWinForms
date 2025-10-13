@@ -26,7 +26,7 @@ partial class AddProductForm
     /// Required method for Designer support - do not modify
     /// the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent ()
+    private void InitializeComponent()
     {
         label1 = new Label();
         label2 = new Label();
@@ -226,6 +226,8 @@ partial class AddProductForm
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(698, 500);
         Controls.Add(groupBox1);
+        FormBorderStyle = FormBorderStyle.Fixed3D;
+        MaximizeBox = false;
         Name = "AddProductForm";
         RightToLeft = RightToLeft.Yes;
         RightToLeftLayout = true;
@@ -245,14 +247,14 @@ partial class AddProductForm
     private Label label4;
     private Label label5;
     private Label label6;
-    private ComboBox cmbCategories;
-    private TextBox txtRef;
-    private TextBox txtDesc;
-    private TextBox txtQuantity;
-    private TextBox txtPrice;
-    private PictureBox productImageBox;
     private Button browseFilesBtn;
     private GroupBox groupBox1;
     private Button cancelBtn;
-    private Button okBtn;
+    public ComboBox cmbCategories;
+    public TextBox txtRef;
+    public TextBox txtDesc;
+    public TextBox txtQuantity;
+    public TextBox txtPrice;
+    public PictureBox productImageBox;
+    public Button okBtn;
 }

@@ -26,7 +26,7 @@ partial class ProductsForm
     /// Required method for Designer support - do not modify
     /// the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent ()
+    private void InitializeComponent()
     {
         label1 = new Label();
         searchTxtBox = new TextBox();
@@ -163,6 +163,7 @@ partial class ProductsForm
         button5.TabIndex = 4;
         button5.Text = "تعديل بيانات المنتوج";
         button5.UseVisualStyleBackColor = false;
+        button5.Click += button5_Click;
         // 
         // button4
         // 
@@ -204,9 +205,12 @@ partial class ProductsForm
         Controls.Add(groupBox1);
         Controls.Add(searchTxtBox);
         Controls.Add(label1);
+        FormBorderStyle = FormBorderStyle.Fixed3D;
+        MaximizeBox = false;
         Name = "ProductsForm";
         RightToLeft = RightToLeft.Yes;
         RightToLeftLayout = true;
+        StartPosition = FormStartPosition.CenterScreen;
         Text = "نافذة إدارة المنتوجات";
         Load += ProductsForm_Load;
         groupBox1.ResumeLayout(false);

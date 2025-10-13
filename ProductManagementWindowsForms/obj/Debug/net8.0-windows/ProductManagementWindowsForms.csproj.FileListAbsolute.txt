@@ -56,3 +56,4 @@ D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.pdb
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.genruntimeconfig.cache
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ref\ProductManagementWindowsForms.dll
+D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.PL.ProductImagePreview.resources

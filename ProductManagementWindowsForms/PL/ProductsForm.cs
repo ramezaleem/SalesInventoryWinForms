@@ -117,8 +117,24 @@ public partial class ProductsForm : Form
         dataGridView1.DataSource = _products.GetAllProducts();
     }
 
+    private void button2_Click(object sender, EventArgs e)
+    {
+        if (dataGridView1.CurrentRow == null) return;
 
+        var imageRow = _products.GetProductImage(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+        if (imageRow.Rows.Count == 0 || imageRow.Rows[0][0] == DBNull.Value) return;
 
+        byte[] imageData = (byte[])imageRow.Rows[0][0];
+
+        ProductImagePreview productImage = new ProductImagePreview();
+
+        using (MemoryStream ms = new MemoryStream(imageData))
+        {
+            productImage.pictureBox1.Image = Image.FromStream(ms);
+        }
+
+        productImage.ShowDialog();
+    }
 
 
 }

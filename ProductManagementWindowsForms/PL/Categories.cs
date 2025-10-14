@@ -19,7 +19,8 @@ namespace ProductManagementWindowsForms.PL
         DataTable dt = new DataTable();
         BindingManagerBase binding;
         SqlCommandBuilder SqlCommandBuilder;
-        BL.Products products = new BL.Products();
+        private bool isEditing = false;
+
 
         public Categories()
         {
@@ -74,35 +75,6 @@ namespace ProductManagementWindowsForms.PL
 
         }
 
-        private void deleteBtn_Click(object sender, EventArgs e)
-        {
-            if (binding.Count == 0)
-            {
-                MessageBox.Show("لا يوجد بيانات للحذف.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (MessageBox.Show("هل تريد حذف هذا السجل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                string id = dt.Rows[binding.Position][0].ToString();
-
-                using (sqlConnection)
-                {
-                    sqlConnection.Open();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM Categories WHERE CategoryId = @Id", sqlConnection);
-                    cmd.Parameters.AddWithValue("@Id", id);
-                    cmd.ExecuteNonQuery();
-                }
-
-                dt.Rows.RemoveAt(binding.Position);
-
-                categoriesList.Refresh(); 
-
-                MessageBox.Show("Deleted Successfully!", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                positionLabel.Text = (binding.Position + 1) + " / " + binding.Count;
-            }
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -134,12 +106,47 @@ namespace ProductManagementWindowsForms.PL
             positionLabel.Text = (binding.Position + 1) + " / " + binding.Count;
         }
 
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            if (binding.Count == 0)
+            {
+                MessageBox.Show("لا يوجد بيانات للحذف.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (MessageBox.Show("هل تريد حذف هذا السجل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string id = dt.Rows[binding.Position][0].ToString();
+
+                using (sqlConnection)
+                {
+                    sqlConnection.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Categories WHERE CategoryId = @Id", sqlConnection);
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.ExecuteNonQuery();
+                }
+
+                dt.Rows.RemoveAt(binding.Position);
+                categoriesList.Refresh();
+
+                MessageBox.Show("Deleted Successfully!", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                addBtn.Enabled = true;
+                insertBtn.Enabled = false;
+                txtDesc.ReadOnly = true;
+
+                positionLabel.Text = (binding.Position + 1) + " / " + binding.Count;
+            }
+        }
+
         private void addBtn_Click(object sender, EventArgs e)
         {
             binding.AddNew();
 
             addBtn.Enabled = false;
             insertBtn.Enabled = true;
+            updateBtn.Enabled = false;
+            deleteBtn.Enabled = false;
 
             txtDesc.ReadOnly = false;
 
@@ -155,17 +162,25 @@ namespace ProductManagementWindowsForms.PL
 
         private void insertBtn_Click(object sender, EventArgs e)
         {
-            binding.EndCurrentEdit();
-            SqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
+            if (string.IsNullOrWhiteSpace(txtDesc.Text))
+            {
+                MessageBox.Show("الرجاء إدخال وصف الصنف.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            binding.EndCurrentEdit();
+            SqlCommandBuilder builder = new SqlCommandBuilder(dataAdapter);
             dataAdapter.Update(dt);
 
             MessageBox.Show("Added Successfully!", "Add", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            categoriesList.Refresh();
 
-            addBtn.Enabled = false;
-            insertBtn.Enabled = true;
-            txtDesc.ReadOnly = false;
+            addBtn.Enabled = true;
+            insertBtn.Enabled = false;
+            updateBtn.Enabled = true;
+            deleteBtn.Enabled = true;
+            txtDesc.ReadOnly = true;
 
             int id = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0]) + 1;
             txtId.Text = id.ToString();
@@ -173,6 +188,50 @@ namespace ProductManagementWindowsForms.PL
             positionLabel.Text = (binding.Position + 1) + " / " + binding.Count;
         }
 
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            if (binding.Count == 0)
+            {
+                MessageBox.Show("لا يوجد بيانات للتعديل.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!isEditing)
+            {
+                txtDesc.ReadOnly = false;
+                addBtn.Enabled = false;
+                insertBtn.Enabled = false;
+                deleteBtn.Enabled = false;
+                txtDesc.Focus();
+                isEditing = true;
+                updateBtn.Text = "حفظ التعديل";
+            }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(txtDesc.Text))
+                {
+                    MessageBox.Show("الرجاء إدخال وصف الصنف.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                binding.EndCurrentEdit();
+                SqlCommandBuilder builder = new SqlCommandBuilder(dataAdapter);
+                dataAdapter.Update(dt);
+
+                MessageBox.Show("تم التعديل بنجاح!", "تحديث", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                categoriesList.Refresh();
+                txtDesc.ReadOnly = true;
+
+                addBtn.Enabled = true;
+                insertBtn.Enabled = false;
+                deleteBtn.Enabled = true;
+                updateBtn.Text = "تعديل";
+                isEditing = false;
+
+                positionLabel.Text = (binding.Position + 1) + " / " + binding.Count;
+            }
+        }
 
 
     }

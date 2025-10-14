@@ -253,6 +253,7 @@
             updateBtn.TabIndex = 11;
             updateBtn.Text = "تعديل";
             updateBtn.UseVisualStyleBackColor = false;
+            updateBtn.Click += updateBtn_Click;
             // 
             // insertBtn
             // 

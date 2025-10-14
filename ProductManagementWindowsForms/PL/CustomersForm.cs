@@ -15,6 +15,7 @@ namespace ProductManagementWindowsForms.PL
     {
         BL.CustomersBL CustomersBL = new BL.CustomersBL();
         DAL.DataAccessLayer accessLayer = new DAL.DataAccessLayer();
+        private bool isEditing = false;
 
         public CustomersForm()
         {
@@ -59,10 +60,71 @@ namespace ProductManagementWindowsForms.PL
 
         }
 
+
         private void button7_Click(object sender, EventArgs e)
         {
+            if (!isEditing)
+            {
+                if (customersList.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("من فضلك اختر عميل أولاً ❗", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
 
+                firstNameText.ReadOnly = false;
+                lastNameTxt.ReadOnly = false;
+                phonetxt.ReadOnly = false;
+                emailTxt.ReadOnly = false;
+                pictureCustomer.Enabled = true;
+
+                editBtn.Text = "حفظ التعديل ✅";
+                isEditing = true;
+            }
+            else
+            {
+                int customerId = Convert.ToInt32(customersList.SelectedRows[0].Cells["CustomerId"].Value);
+
+                SqlCommand cmd = new SqlCommand("UpdateCustomer", new SqlConnection("Data Source=.;Initial Catalog=Product_DBWinForms;Integrated Security=True;TrustServerCertificate=True;"));
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@CustomerId", customerId);
+                cmd.Parameters.AddWithValue("@FirstName", firstNameText.Text);
+                cmd.Parameters.AddWithValue("@LastName", lastNameTxt.Text);
+                cmd.Parameters.AddWithValue("@Tel", phonetxt.Text);
+                cmd.Parameters.AddWithValue("@Email", emailTxt.Text);
+
+                if (pictureCustomer.Image != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        pictureCustomer.Image.Save(ms, pictureCustomer.Image.RawFormat);
+                        cmd.Parameters.AddWithValue("@Picture", ms.ToArray());
+                    }
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Picture", DBNull.Value);
+                }
+
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+
+                MessageBox.Show("تم حفظ التعديلات بنجاح ✅", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                customersList.DataSource = CustomersBL.GetAllCustomers();
+
+                firstNameText.ReadOnly = true;
+                lastNameTxt.ReadOnly = true;
+                phonetxt.ReadOnly = true;
+                emailTxt.ReadOnly = true;
+                pictureCustomer.Enabled = false;
+
+                editBtn.Text = "تعديل ✏️";
+                isEditing = false;
+            }
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

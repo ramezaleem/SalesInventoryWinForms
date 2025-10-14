@@ -52,7 +52,7 @@
             insertBtn = new Button();
             button9 = new Button();
             deleteBtn = new Button();
-            button7 = new Button();
+            editBtn = new Button();
             addBtn = new Button();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureCustomer).BeginInit();
@@ -279,7 +279,7 @@
             groupBox3.Controls.Add(insertBtn);
             groupBox3.Controls.Add(button9);
             groupBox3.Controls.Add(deleteBtn);
-            groupBox3.Controls.Add(button7);
+            groupBox3.Controls.Add(editBtn);
             groupBox3.Controls.Add(addBtn);
             groupBox3.Location = new Point(26, 330);
             groupBox3.Name = "groupBox3";
@@ -321,16 +321,16 @@
             deleteBtn.UseVisualStyleBackColor = false;
             deleteBtn.Click += deleteBtn_Click;
             // 
-            // button7
+            // editBtn
             // 
-            button7.BackColor = Color.FromArgb(255, 255, 192);
-            button7.Location = new Point(158, 41);
-            button7.Name = "button7";
-            button7.Size = new Size(75, 31);
-            button7.TabIndex = 1;
-            button7.Text = "تعديل";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
+            editBtn.BackColor = Color.FromArgb(255, 255, 192);
+            editBtn.Location = new Point(158, 41);
+            editBtn.Name = "editBtn";
+            editBtn.Size = new Size(75, 31);
+            editBtn.TabIndex = 1;
+            editBtn.Text = "تعديل";
+            editBtn.UseVisualStyleBackColor = false;
+            editBtn.Click += button7_Click;
             // 
             // addBtn
             // 
@@ -395,7 +395,7 @@
         private Button insertBtn;
         private Button button9;
         private Button deleteBtn;
-        private Button button7;
+        private Button editBtn;
         private Button addBtn;
         private PictureBox pictureCustomer;
     }

@@ -181,7 +181,6 @@ namespace ProductManagementWindowsForms.PL
             lastNameTxt.Clear();
             phonetxt.Clear();
             emailTxt.Clear();
-            pictureCustomer.Image = null;
             firstNameText.Focus();
         }
 

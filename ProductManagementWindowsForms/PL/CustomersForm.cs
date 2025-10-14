@@ -161,6 +161,33 @@ namespace ProductManagementWindowsForms.PL
             }
         }
 
+        private void searchtxt_TextChanged(object sender, EventArgs e)
+        {
+            string filterText = searchtxt.Text.Trim().ToLower();
+
+            CurrencyManager currencyManager = (CurrencyManager)BindingContext[customersList.DataSource];
+            currencyManager.SuspendBinding();
+
+            foreach (DataGridViewRow row in customersList.Rows)
+            {
+                bool isVisible = false;
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null && cell.Value.ToString().ToLower().Contains(filterText))
+                    {
+                        isVisible = true;
+                        break;
+                    }
+                }
+
+                row.Visible = isVisible;
+            }
+
+            currencyManager.ResumeBinding();
+        }
+
+
 
 
     }

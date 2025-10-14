@@ -46,7 +46,6 @@
             label1 = new Label();
             groupBox1 = new GroupBox();
             customersList = new DataGridView();
-            button1 = new Button();
             searchtxt = new TextBox();
             label5 = new Label();
             groupBox3 = new GroupBox();
@@ -230,7 +229,6 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(customersList);
-            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(searchtxt);
             groupBox1.Controls.Add(label5);
             groupBox1.Location = new Point(589, 12);
@@ -257,23 +255,12 @@
             customersList.TabIndex = 12;
             customersList.CellClick += customersList_CellClick;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(192, 255, 255);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(6, 32);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 27);
-            button1.TabIndex = 11;
-            button1.Text = "موافق";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // searchtxt
             // 
             searchtxt.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            searchtxt.Location = new Point(87, 33);
+            searchtxt.Location = new Point(6, 33);
             searchtxt.Name = "searchtxt";
-            searchtxt.Size = new Size(267, 25);
+            searchtxt.Size = new Size(348, 25);
             searchtxt.TabIndex = 10;
             searchtxt.TextChanged += searchtxt_TextChanged;
             // 
@@ -396,7 +383,6 @@
         private Label label1;
         private GroupBox groupBox1;
         private Label label5;
-        private Button button1;
         private TextBox searchtxt;
         private Label label6;
         private DataGridView customersList;

@@ -31,7 +31,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
-            label3 = new Label();
+            positionLabel = new Label();
             lastBtn = new Button();
             nextBtn = new Button();
             previousBtn = new Button();
@@ -58,7 +58,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(positionLabel);
             groupBox1.Controls.Add(lastBtn);
             groupBox1.Controls.Add(nextBtn);
             groupBox1.Controls.Add(previousBtn);
@@ -74,15 +74,15 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "بيانات الصنف :";
             // 
-            // label3
+            // positionLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(246, 200);
-            label3.Name = "label3";
-            label3.Size = new Size(41, 17);
-            label3.TabIndex = 8;
-            label3.Text = "Label";
+            positionLabel.AutoSize = true;
+            positionLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            positionLabel.Location = new Point(246, 200);
+            positionLabel.Name = "positionLabel";
+            positionLabel.Size = new Size(41, 17);
+            positionLabel.TabIndex = 8;
+            positionLabel.Text = "Label";
             // 
             // lastBtn
             // 
@@ -92,6 +92,7 @@
             lastBtn.TabIndex = 7;
             lastBtn.Text = ">>||";
             lastBtn.UseVisualStyleBackColor = true;
+            lastBtn.Click += lastBtn_Click;
             // 
             // nextBtn
             // 
@@ -101,6 +102,7 @@
             nextBtn.TabIndex = 6;
             nextBtn.Text = ">>";
             nextBtn.UseVisualStyleBackColor = true;
+            nextBtn.Click += nextBtn_Click;
             // 
             // previousBtn
             // 
@@ -110,6 +112,7 @@
             previousBtn.TabIndex = 5;
             previousBtn.Text = "<<";
             previousBtn.UseVisualStyleBackColor = true;
+            previousBtn.Click += previousBtn_Click;
             // 
             // firstBtn
             // 
@@ -119,6 +122,7 @@
             firstBtn.TabIndex = 4;
             firstBtn.Text = "||<<";
             firstBtn.UseVisualStyleBackColor = true;
+            firstBtn.Click += firstBtn_Click;
             // 
             // txtDesc
             // 
@@ -253,12 +257,14 @@
             // insertBtn
             // 
             insertBtn.BackColor = Color.FromArgb(255, 192, 128);
+            insertBtn.Enabled = false;
             insertBtn.Location = new Point(597, 24);
             insertBtn.Name = "insertBtn";
             insertBtn.Size = new Size(181, 36);
             insertBtn.TabIndex = 10;
             insertBtn.Text = "إضافة";
             insertBtn.UseVisualStyleBackColor = false;
+            insertBtn.Click += insertBtn_Click;
             // 
             // addBtn
             // 
@@ -269,6 +275,7 @@
             addBtn.TabIndex = 9;
             addBtn.Text = "جديد";
             addBtn.UseVisualStyleBackColor = false;
+            addBtn.Click += addBtn_Click;
             // 
             // categoriesList
             // 
@@ -291,6 +298,7 @@
             categoriesList.Location = new Point(559, 26);
             categoriesList.MultiSelect = false;
             categoriesList.Name = "categoriesList";
+            categoriesList.ReadOnly = true;
             categoriesList.RowHeadersVisible = false;
             categoriesList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             categoriesList.Size = new Size(424, 242);
@@ -327,7 +335,7 @@
         private Label label1;
         private TextBox txtDesc;
         private TextBox txtId;
-        private Label label3;
+        private Label positionLabel;
         private Button lastBtn;
         private Button nextBtn;
         private Button previousBtn;

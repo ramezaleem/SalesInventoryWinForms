@@ -17,6 +17,9 @@ namespace ProductManagementWindowsForms.PL
         public CustomersForm()
         {
             InitializeComponent();
+
+            customersList.DataSource = CustomersBL.GetAllCustomers();
+            customersList.Columns[0].Visible = false;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -81,6 +84,8 @@ namespace ProductManagementWindowsForms.PL
 
                 CustomersBL.AddCustomer(firstNameText.Text, lastNameTxt.Text, phonetxt.Text, emailTxt.Text, picture);
                 MessageBox.Show("تمت الإضافة بنجاح", "الإضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                customersList.DataSource = CustomersBL.GetAllCustomers();
+
             }
             catch
             {
@@ -128,5 +133,35 @@ namespace ProductManagementWindowsForms.PL
             if (e.KeyCode == Keys.Enter)
                 insertBtn.Focus();
         }
+
+        private void customersList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = customersList.Rows[e.RowIndex];
+
+                //     txtId.Text = row.Cells["CustomerId"].Value.ToString();
+                firstNameText.Text = row.Cells["الاسم الشخصي"].Value.ToString();
+                lastNameTxt.Text = row.Cells["الاسم العائلي"].Value.ToString();
+                phonetxt.Text = row.Cells["الهاتف"].Value.ToString();
+                emailTxt.Text = row.Cells["البريد الالكتروني"].Value.ToString();
+
+                if (row.Cells["CustomerImage"].Value != DBNull.Value)
+                {
+                    byte[] imgData = (byte[])row.Cells["CustomerImage"].Value;
+                    using (MemoryStream ms = new MemoryStream(imgData))
+                    {
+                        pictureCustomer.Image = Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    pictureCustomer.Image = null;
+                }
+            }
+        }
+
+
+
     }
 }

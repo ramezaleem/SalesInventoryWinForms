@@ -30,6 +30,15 @@ namespace ProductManagementWindowsForms.BL
             dataAccessLayer.CLose();
         }
 
+        public DataTable GetAllCustomers()
+        {
+            dataAccessLayer.Open();
+
+            DataTable dataTable = new DataTable();
+            dataTable = dataAccessLayer.SelectData("GetAllCustomers", null);
+            dataAccessLayer.CLose();
+            return dataTable;
+        }
 
 
     }

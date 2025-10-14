@@ -45,7 +45,7 @@
             label2 = new Label();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            dataGridView2 = new DataGridView();
+            customersList = new DataGridView();
             button1 = new Button();
             searchtxt = new TextBox();
             label5 = new Label();
@@ -58,7 +58,7 @@
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureCustomer).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)customersList).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
@@ -229,7 +229,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dataGridView2);
+            groupBox1.Controls.Add(customersList);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(searchtxt);
             groupBox1.Controls.Add(label5);
@@ -240,13 +240,22 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "لائحة جميع العملاء :";
             // 
-            // dataGridView2
+            // customersList
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(6, 67);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(404, 245);
-            dataGridView2.TabIndex = 12;
+            customersList.AllowUserToAddRows = false;
+            customersList.AllowUserToDeleteRows = false;
+            customersList.AllowUserToResizeRows = false;
+            customersList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            customersList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            customersList.Location = new Point(6, 67);
+            customersList.MultiSelect = false;
+            customersList.Name = "customersList";
+            customersList.ReadOnly = true;
+            customersList.RowHeadersVisible = false;
+            customersList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            customersList.Size = new Size(404, 245);
+            customersList.TabIndex = 12;
+            customersList.CellClick += customersList_CellClick;
             // 
             // button1
             // 
@@ -266,6 +275,7 @@
             searchtxt.Name = "searchtxt";
             searchtxt.Size = new Size(267, 25);
             searchtxt.TabIndex = 10;
+            searchtxt.TextChanged += searchtxt_TextChanged;
             // 
             // label5
             // 
@@ -368,7 +378,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureCustomer).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)customersList).EndInit();
             groupBox3.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -389,7 +399,7 @@
         private Button button1;
         private TextBox searchtxt;
         private Label label6;
-        private DataGridView dataGridView2;
+        private DataGridView customersList;
         private Button button2;
         private Button button3;
         private Button button4;

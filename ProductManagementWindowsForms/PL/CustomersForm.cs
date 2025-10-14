@@ -16,6 +16,7 @@ namespace ProductManagementWindowsForms.PL
         BL.CustomersBL CustomersBL = new BL.CustomersBL();
         DAL.DataAccessLayer accessLayer = new DAL.DataAccessLayer();
         private bool isEditing = false;
+        BindingManagerBase binding;
 
         public CustomersForm()
         {
@@ -52,13 +53,30 @@ namespace ProductManagementWindowsForms.PL
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (customersList.DataSource == null) return;
 
+            if (binding == null)
+                binding = this.BindingContext[customersList.DataSource];
+
+            binding.Position = binding.Count - 1;
+            totalCustomersLabel.Text = (binding.Position + 1) + " / " + binding.Count;
         }
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (customersList.DataSource == null) return;
 
+            if (binding == null)
+                binding = this.BindingContext[customersList.DataSource];
+
+            if (binding.Position < binding.Count - 1)
+                binding.Position++;
+
+            totalCustomersLabel.Text = (binding.Position + 1) + " / " + binding.Count;
         }
+
 
 
         private void button7_Click(object sender, EventArgs e)
@@ -280,6 +298,36 @@ namespace ProductManagementWindowsForms.PL
             {
                 MessageBox.Show("من فضلك اختر عميل أولاً ❗", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void previousCutomer_Click(object sender, EventArgs e)
+        {
+            if (customersList.DataSource == null) return;
+
+            if (binding == null)
+                binding = this.BindingContext[customersList.DataSource];
+
+            if (binding.Position > 0)
+                binding.Position--;
+
+            totalCustomersLabel.Text = (binding.Position + 1) + " / " + binding.Count;
+        }
+
+        private void firstCustomer_Click(object sender, EventArgs e)
+        {
+            if (customersList.DataSource == null) return;
+
+            if (binding == null)
+                binding = this.BindingContext[customersList.DataSource];
+
+            binding.Position = 0;
+
+            totalCustomersLabel.Text = (binding.Position + 1) + " / " + binding.Count;
         }
 
 

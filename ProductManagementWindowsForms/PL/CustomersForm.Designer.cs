@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomersForm));
             groupBox2 = new GroupBox();
             pictureCustomer = new PictureBox();
-            button4 = new Button();
-            button5 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            label6 = new Label();
+            firstCustomer = new Button();
+            previousCutomer = new Button();
+            nextCustomer = new Button();
+            lastCustomer = new Button();
+            totalCustomersLabel = new Label();
             lastNameTxt = new TextBox();
             emailTxt = new TextBox();
             phonetxt = new TextBox();
@@ -50,7 +50,7 @@
             label5 = new Label();
             groupBox3 = new GroupBox();
             insertBtn = new Button();
-            button9 = new Button();
+            cancelBtn = new Button();
             deleteBtn = new Button();
             editBtn = new Button();
             addBtn = new Button();
@@ -64,11 +64,11 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(pictureCustomer);
-            groupBox2.Controls.Add(button4);
-            groupBox2.Controls.Add(button5);
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(firstCustomer);
+            groupBox2.Controls.Add(previousCutomer);
+            groupBox2.Controls.Add(nextCustomer);
+            groupBox2.Controls.Add(lastCustomer);
+            groupBox2.Controls.Add(totalCustomersLabel);
             groupBox2.Controls.Add(lastNameTxt);
             groupBox2.Controls.Add(emailTxt);
             groupBox2.Controls.Add(phonetxt);
@@ -98,54 +98,56 @@
             pictureCustomer.TabStop = false;
             pictureCustomer.Click += pictureBox1_Click;
             // 
-            // button4
+            // firstCustomer
             // 
-            button4.Location = new Point(211, 230);
-            button4.Name = "button4";
-            button4.Size = new Size(49, 32);
-            button4.TabIndex = 17;
-            button4.Text = ">>||";
-            button4.UseVisualStyleBackColor = true;
+            firstCustomer.Location = new Point(211, 230);
+            firstCustomer.Name = "firstCustomer";
+            firstCustomer.Size = new Size(49, 32);
+            firstCustomer.TabIndex = 17;
+            firstCustomer.Text = ">>||";
+            firstCustomer.UseVisualStyleBackColor = true;
+            firstCustomer.Click += firstCustomer_Click;
             // 
-            // button5
+            // previousCutomer
             // 
-            button5.Location = new Point(266, 230);
-            button5.Name = "button5";
-            button5.Size = new Size(49, 32);
-            button5.TabIndex = 16;
-            button5.Text = ">>";
-            button5.UseVisualStyleBackColor = true;
+            previousCutomer.Location = new Point(269, 230);
+            previousCutomer.Name = "previousCutomer";
+            previousCutomer.Size = new Size(49, 32);
+            previousCutomer.TabIndex = 16;
+            previousCutomer.Text = ">>";
+            previousCutomer.UseVisualStyleBackColor = true;
+            previousCutomer.Click += previousCutomer_Click;
             // 
-            // button3
+            // nextCustomer
             // 
-            button3.Location = new Point(450, 230);
-            button3.Name = "button3";
-            button3.Size = new Size(49, 32);
-            button3.TabIndex = 15;
-            button3.Text = "<<";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            nextCustomer.Location = new Point(444, 230);
+            nextCustomer.Name = "nextCustomer";
+            nextCustomer.Size = new Size(49, 32);
+            nextCustomer.TabIndex = 15;
+            nextCustomer.Text = "<<";
+            nextCustomer.UseVisualStyleBackColor = true;
+            nextCustomer.Click += button3_Click;
             // 
-            // button2
+            // lastCustomer
             // 
-            button2.Location = new Point(505, 230);
-            button2.Name = "button2";
-            button2.Size = new Size(49, 32);
-            button2.TabIndex = 14;
-            button2.Text = "||<<";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            lastCustomer.Location = new Point(503, 230);
+            lastCustomer.Name = "lastCustomer";
+            lastCustomer.Size = new Size(49, 32);
+            lastCustomer.TabIndex = 14;
+            lastCustomer.Text = "||<<";
+            lastCustomer.UseVisualStyleBackColor = true;
+            lastCustomer.Click += button2_Click;
             // 
-            // label6
+            // totalCustomersLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(351, 237);
-            label6.Name = "label6";
-            label6.Size = new Size(63, 17);
-            label6.TabIndex = 13;
-            label6.Text = "ابحث هنا :";
-            label6.Click += label6_Click;
+            totalCustomersLabel.AutoSize = true;
+            totalCustomersLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            totalCustomersLabel.Location = new Point(361, 237);
+            totalCustomersLabel.Name = "totalCustomersLabel";
+            totalCustomersLabel.Size = new Size(41, 17);
+            totalCustomersLabel.TabIndex = 13;
+            totalCustomersLabel.Text = "Label";
+            totalCustomersLabel.Click += label6_Click;
             // 
             // lastNameTxt
             // 
@@ -277,7 +279,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(insertBtn);
-            groupBox3.Controls.Add(button9);
+            groupBox3.Controls.Add(cancelBtn);
             groupBox3.Controls.Add(deleteBtn);
             groupBox3.Controls.Add(editBtn);
             groupBox3.Controls.Add(addBtn);
@@ -299,16 +301,17 @@
             insertBtn.UseVisualStyleBackColor = false;
             insertBtn.Click += insertBtn_Click;
             // 
-            // button9
+            // cancelBtn
             // 
-            button9.BackColor = Color.Red;
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(53, 42);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 31);
-            button9.TabIndex = 3;
-            button9.Text = "خروج";
-            button9.UseVisualStyleBackColor = false;
+            cancelBtn.BackColor = Color.Red;
+            cancelBtn.ForeColor = Color.White;
+            cancelBtn.Location = new Point(53, 42);
+            cancelBtn.Name = "cancelBtn";
+            cancelBtn.Size = new Size(75, 31);
+            cancelBtn.TabIndex = 3;
+            cancelBtn.Text = "خروج";
+            cancelBtn.UseVisualStyleBackColor = false;
+            cancelBtn.Click += cancelBtn_Click;
             // 
             // deleteBtn
             // 
@@ -385,15 +388,15 @@
         private GroupBox groupBox1;
         private Label label5;
         private TextBox searchtxt;
-        private Label label6;
+        private Label totalCustomersLabel;
         private DataGridView customersList;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button lastCustomer;
+        private Button nextCustomer;
+        private Button firstCustomer;
+        private Button previousCutomer;
         private GroupBox groupBox3;
         private Button insertBtn;
-        private Button button9;
+        private Button cancelBtn;
         private Button deleteBtn;
         private Button editBtn;
         private Button addBtn;

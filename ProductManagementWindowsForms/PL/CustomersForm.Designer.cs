@@ -54,7 +54,7 @@
             button9 = new Button();
             button8 = new Button();
             button7 = new Button();
-            button6 = new Button();
+            addBtn = new Button();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureCustomer).BeginInit();
             groupBox1.SuspendLayout();
@@ -156,6 +156,7 @@
             lastNameTxt.Size = new Size(213, 25);
             lastNameTxt.TabIndex = 7;
             lastNameTxt.TextChanged += textBox4_TextChanged;
+            lastNameTxt.KeyDown += lastNameTxt_KeyDown;
             // 
             // emailTxt
             // 
@@ -165,6 +166,7 @@
             emailTxt.Size = new Size(213, 25);
             emailTxt.TabIndex = 6;
             emailTxt.TextChanged += textBox3_TextChanged;
+            emailTxt.KeyDown += emailTxt_KeyDown;
             // 
             // phonetxt
             // 
@@ -173,6 +175,7 @@
             phonetxt.Name = "phonetxt";
             phonetxt.Size = new Size(213, 25);
             phonetxt.TabIndex = 5;
+            phonetxt.KeyDown += phonetxt_KeyDown;
             // 
             // firstNameText
             // 
@@ -181,6 +184,8 @@
             firstNameText.Name = "firstNameText";
             firstNameText.Size = new Size(213, 25);
             firstNameText.TabIndex = 4;
+            firstNameText.TextChanged += firstNameText_TextChanged;
+            firstNameText.KeyDown += firstNameText_KeyDown;
             // 
             // label4
             // 
@@ -278,7 +283,7 @@
             groupBox3.Controls.Add(button9);
             groupBox3.Controls.Add(button8);
             groupBox3.Controls.Add(button7);
-            groupBox3.Controls.Add(button6);
+            groupBox3.Controls.Add(addBtn);
             groupBox3.Location = new Point(26, 330);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(551, 90);
@@ -329,16 +334,17 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
-            // button6
+            // addBtn
             // 
-            button6.BackColor = Color.FromArgb(192, 255, 192);
-            button6.Cursor = Cursors.Hand;
-            button6.Location = new Point(473, 41);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 31);
-            button6.TabIndex = 0;
-            button6.Text = "جديد";
-            button6.UseVisualStyleBackColor = false;
+            addBtn.BackColor = Color.FromArgb(192, 255, 192);
+            addBtn.Cursor = Cursors.Hand;
+            addBtn.Location = new Point(473, 41);
+            addBtn.Name = "addBtn";
+            addBtn.Size = new Size(75, 31);
+            addBtn.TabIndex = 0;
+            addBtn.Text = "جديد";
+            addBtn.UseVisualStyleBackColor = false;
+            addBtn.Click += button6_Click;
             // 
             // CustomersForm
             // 
@@ -393,7 +399,7 @@
         private Button button9;
         private Button button8;
         private Button button7;
-        private Button button6;
+        private Button addBtn;
         private PictureBox pictureCustomer;
     }
 }

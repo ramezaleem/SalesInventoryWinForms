@@ -64,7 +64,7 @@ namespace ProductManagementWindowsForms.PL
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "ملفات الصور | *.JPG; *.PNG; *.GIF;";
 
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureCustomer.Image = Image.FromFile(openFileDialog.FileName);
             }
@@ -88,6 +88,45 @@ namespace ProductManagementWindowsForms.PL
             }
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            firstNameText.Clear();
+            lastNameTxt.Clear();
+            phonetxt.Clear();
+            emailTxt.Clear();
+            pictureCustomer.Image = null;
+            firstNameText.Focus();
+        }
 
+        private void firstNameText_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void firstNameText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                lastNameTxt.Focus();
+        }
+
+        private void lastNameTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+                phonetxt.Focus();
+        }
+
+        private void phonetxt_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+                emailTxt.Focus();
+        }
+
+        private void emailTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+                insertBtn.Focus();
+        }
     }
 }

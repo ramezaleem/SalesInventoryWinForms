@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace ProductManagementWindowsForms.PL
     public partial class CustomersForm : Form
     {
         BL.CustomersBL CustomersBL = new BL.CustomersBL();
+        DAL.DataAccessLayer accessLayer = new DAL.DataAccessLayer();
 
         public CustomersForm()
         {
@@ -187,6 +189,36 @@ namespace ProductManagementWindowsForms.PL
             currencyManager.ResumeBinding();
         }
 
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            if (customersList.SelectedRows.Count > 0)
+            {
+                int customerId = Convert.ToInt32(customersList.SelectedRows[0].Cells["CustomerId"].Value);
+
+                DialogResult result = MessageBox.Show("هل أنت متأكد من حذف هذا العميل؟", "تأكيد الحذف",
+                                                      MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    SqlParameter[] parameters =
+                    {
+                new SqlParameter("@CustomerId", SqlDbType.Int) { Value = customerId }
+            };
+
+                    accessLayer.Open();
+                    accessLayer.ExecuteCommand("DeleteCustomer", parameters);
+                    accessLayer.CLose();
+
+                    MessageBox.Show("تم حذف العميل بنجاح ✅", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    customersList.DataSource = CustomersBL.GetAllCustomers(); // إعادة تحميل البيانات بعد الحذف
+                }
+            }
+            else
+            {
+                MessageBox.Show("من فضلك اختر عميل أولاً ❗", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
 
 
 

@@ -7,6 +7,9 @@
     <Compile Update="PL\Categories.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PL\CustomersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PL\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

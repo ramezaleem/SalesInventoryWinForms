@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProductManagementWindowsForms.PL
+{
+    public partial class CustomersForm : Form
+    {
+        BL.CustomersBL CustomersBL = new BL.CustomersBL();
+
+        public CustomersForm()
+        {
+            InitializeComponent();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomersForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "ملفات الصور | *.JPG; *.PNG; *.GIF;";
+
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureCustomer.Image = Image.FromFile(openFileDialog.FileName);
+            }
+        }
+
+        private void insertBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MemoryStream memoryStream = new MemoryStream();
+
+                pictureCustomer.Image.Save(memoryStream, pictureCustomer.Image.RawFormat);
+                byte[] picture = memoryStream.ToArray();
+
+                CustomersBL.AddCustomer(firstNameText.Text, lastNameTxt.Text, phonetxt.Text, emailTxt.Text, picture);
+                MessageBox.Show("تمت الإضافة بنجاح", "الإضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+
+    }
+}

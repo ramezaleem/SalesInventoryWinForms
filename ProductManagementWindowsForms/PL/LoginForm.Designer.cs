@@ -26,7 +26,7 @@ partial class LoginForm
     /// Required method for Designer support - do not modify
     /// the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent ()
+    private void InitializeComponent()
     {
         label1 = new Label();
         label2 = new Label();
@@ -69,8 +69,10 @@ partial class LoginForm
         // 
         txtPassword.Location = new Point(190, 91);
         txtPassword.Name = "txtPassword";
+        txtPassword.PasswordChar = '*';
         txtPassword.Size = new Size(310, 27);
         txtPassword.TabIndex = 3;
+        txtPassword.UseSystemPasswordChar = true;
         // 
         // loginBtn
         // 

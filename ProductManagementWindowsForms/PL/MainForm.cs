@@ -44,7 +44,8 @@ public partial class MainForm : Form
 
     private void إدارةالعملاءToolStripMenuItem_Click(object sender, EventArgs e)
     {
-
+        CustomersForm customersForm = new CustomersForm();
+        customersForm.ShowDialog();
     }
 
     private void MainForm_Load(object sender, EventArgs e)

@@ -143,3 +143,4 @@ D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\bin\Debug
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.Reports.ProductPrintReport.resources
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.PL.Categories.resources
 D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.PL.CustomersForm.resources
+D:\Ramez\Learning\SalesInventoryWinForms\ProductManagementWindowsForms\obj\Debug\net8.0-windows\ProductManagementWindowsForms.PL.OrdersForm.resources

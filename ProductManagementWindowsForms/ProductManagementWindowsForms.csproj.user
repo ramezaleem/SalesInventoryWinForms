@@ -16,6 +16,9 @@
     <Compile Update="PL\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PL\OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PL\ProductImagePreview.cs">
       <SubType>Form</SubType>
     </Compile>

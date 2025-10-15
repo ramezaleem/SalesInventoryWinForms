@@ -16,7 +16,8 @@ namespace ProductManagementWindowsForms
             //   Application.Run(new LoginForm());
             //Application.Run(new MainForm());
             //Application.Run(new Categories());
-            Application.Run(new CustomersForm());
+            //Application.Run(new CustomersForm());
+            Application.Run(new OrdersForm());
             //Application.Run(new ProductsForm());
             //Application.Run(new AddProductForm());
         }

@@ -13,10 +13,54 @@ namespace ProductManagementWindowsForms.PL
     public partial class OrdersForm : Form
     {
         BL.OrdersBL orders = new BL.OrdersBL();
+        DataTable dataTable = new DataTable();
+
+        void CreateTable()
+        {
+            dataTable.Columns.Add("معرف المنتوج");
+            dataTable.Columns.Add("اسم المنتوج");
+            dataTable.Columns.Add("القمن");
+            dataTable.Columns.Add("الكمية");
+            dataTable.Columns.Add("المبلع");
+            dataTable.Columns.Add("نسبة الخصم (%)");
+            dataTable.Columns.Add("المبلغ الإجمالي");
+
+            ordersListDataGridView.DataSource = dataTable;
+
+            //ResizeDGV(); // استدعاء resize بعد ما الأعمدة اتكونت
+        }
+
+        //void ResizeDGV()
+        //{
+        //    if (ordersListDataGridView.Columns == null || ordersListDataGridView.Columns.Count == 0)
+        //        return;
+
+        //    ordersListDataGridView.RowHeadersWidth = 91;
+
+        //    void SetWidth(int index, int width)
+        //    {
+        //        if (index >= 0 &&
+        //            ordersListDataGridView.Columns.Count > index &&
+        //            ordersListDataGridView.Columns[index] != null)
+        //        {
+        //            ordersListDataGridView.Columns[index].Width = width;
+        //        }
+        //    }
+
+        //    SetWidth(0, 91);
+        //    SetWidth(1, 293);
+        //    SetWidth(2, 91);
+        //    SetWidth(3, 91);
+        //    SetWidth(4, 91);
+        //    SetWidth(5, 91);
+        //    SetWidth(6, 144);
+        //}
+
 
         public OrdersForm()
         {
             InitializeComponent();
+            CreateTable();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -108,11 +152,41 @@ namespace ProductManagementWindowsForms.PL
             }
             else
             {
+                MessageBox.Show("هذا العميل ليس لديه صورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cutomerPicture.Image = new Bitmap(1, 1); // صورة شفافة بديلة في حالة عدم وجود صورة
             }
         }
 
+        private void ordersListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
+
+        private void ordersListDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void browseProductsBtn_Click(object sender, EventArgs e)
+        {
+            ProductsList form = new ProductsList();
+            form.ShowDialog();
+        }
 
     }
 }

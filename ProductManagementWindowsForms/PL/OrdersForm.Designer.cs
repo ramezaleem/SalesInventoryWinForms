@@ -52,7 +52,23 @@
             label6 = new Label();
             label2 = new Label();
             groupBox3 = new GroupBox();
+            label18 = new Label();
+            totalmountTxtBox = new TextBox();
+            label17 = new Label();
+            discountTxtBox = new TextBox();
+            label16 = new Label();
+            amountTxtBox = new TextBox();
+            label15 = new Label();
+            quanitiyTxtBox = new TextBox();
+            label14 = new Label();
+            priceTxtBox = new TextBox();
+            label13 = new Label();
+            productNameTxtBox = new TextBox();
+            label12 = new Label();
+            productRefTxtBox = new TextBox();
+            label11 = new Label();
             ordersListDataGridView = new DataGridView();
+            browseProductsBtn = new Button();
             deleteSelectionRowBtn = new Button();
             label10 = new Label();
             SumTxtBox = new TextBox();
@@ -307,28 +323,229 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(label18);
+            groupBox3.Controls.Add(totalmountTxtBox);
+            groupBox3.Controls.Add(label17);
+            groupBox3.Controls.Add(discountTxtBox);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(amountTxtBox);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Controls.Add(quanitiyTxtBox);
+            groupBox3.Controls.Add(label14);
+            groupBox3.Controls.Add(priceTxtBox);
+            groupBox3.Controls.Add(label13);
+            groupBox3.Controls.Add(productNameTxtBox);
+            groupBox3.Controls.Add(label12);
+            groupBox3.Controls.Add(productRefTxtBox);
+            groupBox3.Controls.Add(label11);
             groupBox3.Controls.Add(ordersListDataGridView);
+            groupBox3.Controls.Add(browseProductsBtn);
             groupBox3.Location = new Point(20, 244);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(1004, 212);
+            groupBox3.Size = new Size(1004, 274);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "المنتجات :";
             // 
+            // label18
+            // 
+            label18.BackColor = Color.WhiteSmoke;
+            label18.BorderStyle = BorderStyle.FixedSingle;
+            label18.FlatStyle = FlatStyle.Flat;
+            label18.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Location = new Point(884, 37);
+            label18.Name = "label18";
+            label18.Padding = new Padding(3);
+            label18.Size = new Size(91, 31);
+            label18.TabIndex = 15;
+            label18.Text = "اختيار";
+            label18.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // totalmountTxtBox
+            // 
+            totalmountTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            totalmountTxtBox.Location = new Point(1, 67);
+            totalmountTxtBox.Name = "totalmountTxtBox";
+            totalmountTxtBox.ReadOnly = true;
+            totalmountTxtBox.Size = new Size(144, 23);
+            totalmountTxtBox.TabIndex = 14;
+            // 
+            // label17
+            // 
+            label17.BackColor = Color.WhiteSmoke;
+            label17.BorderStyle = BorderStyle.FixedSingle;
+            label17.FlatStyle = FlatStyle.Flat;
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Location = new Point(1, 37);
+            label17.Name = "label17";
+            label17.Padding = new Padding(3);
+            label17.Size = new Size(144, 31);
+            label17.TabIndex = 13;
+            label17.Text = "المبلغ الإجمالي";
+            label17.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // discountTxtBox
+            // 
+            discountTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            discountTxtBox.Location = new Point(144, 67);
+            discountTxtBox.Name = "discountTxtBox";
+            discountTxtBox.Size = new Size(91, 23);
+            discountTxtBox.TabIndex = 12;
+            // 
+            // label16
+            // 
+            label16.BackColor = Color.WhiteSmoke;
+            label16.BorderStyle = BorderStyle.FixedSingle;
+            label16.FlatStyle = FlatStyle.Flat;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.Location = new Point(144, 37);
+            label16.Name = "label16";
+            label16.Padding = new Padding(3);
+            label16.Size = new Size(91, 31);
+            label16.TabIndex = 11;
+            label16.Text = "الخصم (%)";
+            label16.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // amountTxtBox
+            // 
+            amountTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            amountTxtBox.Location = new Point(234, 67);
+            amountTxtBox.Name = "amountTxtBox";
+            amountTxtBox.ReadOnly = true;
+            amountTxtBox.Size = new Size(91, 23);
+            amountTxtBox.TabIndex = 10;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.WhiteSmoke;
+            label15.BorderStyle = BorderStyle.FixedSingle;
+            label15.FlatStyle = FlatStyle.Flat;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(234, 37);
+            label15.Name = "label15";
+            label15.Padding = new Padding(3);
+            label15.Size = new Size(91, 31);
+            label15.TabIndex = 9;
+            label15.Text = "المبلع";
+            label15.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // quanitiyTxtBox
+            // 
+            quanitiyTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            quanitiyTxtBox.Location = new Point(322, 67);
+            quanitiyTxtBox.Name = "quanitiyTxtBox";
+            quanitiyTxtBox.Size = new Size(91, 23);
+            quanitiyTxtBox.TabIndex = 8;
+            // 
+            // label14
+            // 
+            label14.BackColor = Color.WhiteSmoke;
+            label14.BorderStyle = BorderStyle.FixedSingle;
+            label14.FlatStyle = FlatStyle.Flat;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Location = new Point(322, 37);
+            label14.Name = "label14";
+            label14.Padding = new Padding(3);
+            label14.Size = new Size(91, 31);
+            label14.TabIndex = 7;
+            label14.Text = "الكمية";
+            label14.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // priceTxtBox
+            // 
+            priceTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            priceTxtBox.Location = new Point(412, 67);
+            priceTxtBox.Name = "priceTxtBox";
+            priceTxtBox.Size = new Size(91, 23);
+            priceTxtBox.TabIndex = 6;
+            // 
+            // label13
+            // 
+            label13.BackColor = Color.WhiteSmoke;
+            label13.BorderStyle = BorderStyle.FixedSingle;
+            label13.FlatStyle = FlatStyle.Flat;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(412, 37);
+            label13.Name = "label13";
+            label13.Padding = new Padding(3);
+            label13.Size = new Size(91, 31);
+            label13.TabIndex = 5;
+            label13.Text = "الثمن";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // productNameTxtBox
+            // 
+            productNameTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            productNameTxtBox.Location = new Point(502, 67);
+            productNameTxtBox.Name = "productNameTxtBox";
+            productNameTxtBox.ReadOnly = true;
+            productNameTxtBox.Size = new Size(293, 23);
+            productNameTxtBox.TabIndex = 4;
+            // 
+            // label12
+            // 
+            label12.BackColor = Color.WhiteSmoke;
+            label12.BorderStyle = BorderStyle.FixedSingle;
+            label12.FlatStyle = FlatStyle.Flat;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(502, 37);
+            label12.Name = "label12";
+            label12.Padding = new Padding(3);
+            label12.Size = new Size(293, 31);
+            label12.TabIndex = 3;
+            label12.Text = "اسم المنتج";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // productRefTxtBox
+            // 
+            productRefTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            productRefTxtBox.Location = new Point(794, 67);
+            productRefTxtBox.Name = "productRefTxtBox";
+            productRefTxtBox.ReadOnly = true;
+            productRefTxtBox.Size = new Size(91, 23);
+            productRefTxtBox.TabIndex = 2;
+            productRefTxtBox.TextChanged += textBox1_TextChanged_1;
+            // 
+            // label11
+            // 
+            label11.BackColor = Color.WhiteSmoke;
+            label11.BorderStyle = BorderStyle.FixedSingle;
+            label11.FlatStyle = FlatStyle.Flat;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(794, 37);
+            label11.Name = "label11";
+            label11.Padding = new Padding(3);
+            label11.Size = new Size(91, 31);
+            label11.TabIndex = 1;
+            label11.Text = "معرف المنتج";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // ordersListDataGridView
             // 
+            ordersListDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ordersListDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ordersListDataGridView.Location = new Point(0, 22);
+            ordersListDataGridView.Location = new Point(0, 97);
             ordersListDataGridView.Name = "ordersListDataGridView";
-            ordersListDataGridView.ReadOnly = true;
-            ordersListDataGridView.Size = new Size(1004, 184);
+            ordersListDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ordersListDataGridView.Size = new Size(1004, 171);
             ordersListDataGridView.TabIndex = 0;
+            ordersListDataGridView.CellContentClick += ordersListDataGridView_CellContentClick_1;
+            // 
+            // browseProductsBtn
+            // 
+            browseProductsBtn.Location = new Point(884, 67);
+            browseProductsBtn.Name = "browseProductsBtn";
+            browseProductsBtn.Size = new Size(91, 23);
+            browseProductsBtn.TabIndex = 16;
+            browseProductsBtn.Text = "...";
+            browseProductsBtn.UseVisualStyleBackColor = true;
+            browseProductsBtn.Click += browseProductsBtn_Click;
             // 
             // deleteSelectionRowBtn
             // 
             deleteSelectionRowBtn.BackColor = Color.FromArgb(255, 192, 192);
             deleteSelectionRowBtn.Enabled = false;
-            deleteSelectionRowBtn.Location = new Point(20, 473);
+            deleteSelectionRowBtn.Location = new Point(20, 536);
             deleteSelectionRowBtn.Name = "deleteSelectionRowBtn";
             deleteSelectionRowBtn.Size = new Size(132, 23);
             deleteSelectionRowBtn.TabIndex = 3;
@@ -339,7 +556,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(735, 476);
+            label10.Location = new Point(735, 539);
             label10.Name = "label10";
             label10.Size = new Size(62, 17);
             label10.TabIndex = 20;
@@ -350,7 +567,7 @@
             // 
             SumTxtBox.BackColor = Color.FromArgb(192, 255, 255);
             SumTxtBox.BorderStyle = BorderStyle.FixedSingle;
-            SumTxtBox.Location = new Point(816, 473);
+            SumTxtBox.Location = new Point(816, 536);
             SumTxtBox.Name = "SumTxtBox";
             SumTxtBox.ReadOnly = true;
             SumTxtBox.Size = new Size(208, 23);
@@ -360,7 +577,7 @@
             // addNewSaleBtn
             // 
             addNewSaleBtn.BackColor = Color.FromArgb(192, 255, 192);
-            addNewSaleBtn.Location = new Point(267, 566);
+            addNewSaleBtn.Location = new Point(267, 570);
             addNewSaleBtn.Name = "addNewSaleBtn";
             addNewSaleBtn.Size = new Size(98, 33);
             addNewSaleBtn.TabIndex = 21;
@@ -372,7 +589,7 @@
             // 
             button5.BackColor = Color.Red;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(663, 566);
+            button5.Location = new Point(663, 570);
             button5.Name = "button5";
             button5.Size = new Size(98, 33);
             button5.TabIndex = 23;
@@ -384,7 +601,7 @@
             // 
             printSaleBtn.BackColor = Color.FromArgb(192, 192, 255);
             printSaleBtn.Enabled = false;
-            printSaleBtn.Location = new Point(531, 566);
+            printSaleBtn.Location = new Point(531, 570);
             printSaleBtn.Name = "printSaleBtn";
             printSaleBtn.Size = new Size(98, 33);
             printSaleBtn.TabIndex = 24;
@@ -395,7 +612,7 @@
             // 
             saveNewSaleBtn.BackColor = Color.FromArgb(255, 255, 192);
             saveNewSaleBtn.Enabled = false;
-            saveNewSaleBtn.Location = new Point(399, 566);
+            saveNewSaleBtn.Location = new Point(399, 570);
             saveNewSaleBtn.Name = "saveNewSaleBtn";
             saveNewSaleBtn.Size = new Size(98, 33);
             saveNewSaleBtn.TabIndex = 25;
@@ -432,6 +649,7 @@
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)cutomerPicture).EndInit();
             groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ordersListDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -470,5 +688,21 @@
         private Button button5;
         private Button printSaleBtn;
         private Button saveNewSaleBtn;
+        private TextBox productRefTxtBox;
+        private Label label11;
+        private TextBox priceTxtBox;
+        private Label label13;
+        private TextBox productNameTxtBox;
+        private Label label12;
+        private TextBox quanitiyTxtBox;
+        private Label label14;
+        private TextBox totalmountTxtBox;
+        private Label label17;
+        private TextBox discountTxtBox;
+        private Label label16;
+        private TextBox amountTxtBox;
+        private Label label15;
+        private Button browseProductsBtn;
+        private Label label18;
     }
 }

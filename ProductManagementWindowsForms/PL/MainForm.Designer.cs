@@ -102,26 +102,26 @@ partial class MainForm
         // إضافةمنتججديدToolStripMenuItem
         // 
         إضافةمنتججديدToolStripMenuItem.Name = "إضافةمنتججديدToolStripMenuItem";
-        إضافةمنتججديدToolStripMenuItem.Size = new Size(180, 22);
+        إضافةمنتججديدToolStripMenuItem.Size = new Size(155, 22);
         إضافةمنتججديدToolStripMenuItem.Text = "إضافة منتج جديد";
         إضافةمنتججديدToolStripMenuItem.Click += إضافةمنتججديدToolStripMenuItem_Click;
         // 
         // إدارةالمنتوجاتToolStripMenuItem
         // 
         إدارةالمنتوجاتToolStripMenuItem.Name = "إدارةالمنتوجاتToolStripMenuItem";
-        إدارةالمنتوجاتToolStripMenuItem.Size = new Size(180, 22);
+        إدارةالمنتوجاتToolStripMenuItem.Size = new Size(155, 22);
         إدارةالمنتوجاتToolStripMenuItem.Text = "إدارة المنتوجات";
         إدارةالمنتوجاتToolStripMenuItem.Click += إدارةالمنتوجاتToolStripMenuItem_Click;
         // 
         // toolStripSeparator1
         // 
         toolStripSeparator1.Name = "toolStripSeparator1";
-        toolStripSeparator1.Size = new Size(177, 6);
+        toolStripSeparator1.Size = new Size(152, 6);
         // 
         // إدارةالأصنافToolStripMenuItem
         // 
         إدارةالأصنافToolStripMenuItem.Name = "إدارةالأصنافToolStripMenuItem";
-        إدارةالأصنافToolStripMenuItem.Size = new Size(180, 22);
+        إدارةالأصنافToolStripMenuItem.Size = new Size(155, 22);
         إدارةالأصنافToolStripMenuItem.Text = "إدارة الأصناف";
         إدارةالأصنافToolStripMenuItem.Click += إدارةالأصنافToolStripMenuItem_Click;
         // 
@@ -135,31 +135,32 @@ partial class MainForm
         // إضافةعميلجديدToolStripMenuItem
         // 
         إضافةعميلجديدToolStripMenuItem.Name = "إضافةعميلجديدToolStripMenuItem";
-        إضافةعميلجديدToolStripMenuItem.Size = new Size(159, 22);
+        إضافةعميلجديدToolStripMenuItem.Size = new Size(180, 22);
         إضافةعميلجديدToolStripMenuItem.Text = "إضافة عميل جديد";
         // 
         // إدارةالعملاءToolStripMenuItem
         // 
         إدارةالعملاءToolStripMenuItem.Name = "إدارةالعملاءToolStripMenuItem";
-        إدارةالعملاءToolStripMenuItem.Size = new Size(159, 22);
+        إدارةالعملاءToolStripMenuItem.Size = new Size(180, 22);
         إدارةالعملاءToolStripMenuItem.Text = "إدارة العملاء";
         إدارةالعملاءToolStripMenuItem.Click += إدارةالعملاءToolStripMenuItem_Click;
         // 
         // toolStripSeparator2
         // 
         toolStripSeparator2.Name = "toolStripSeparator2";
-        toolStripSeparator2.Size = new Size(156, 6);
+        toolStripSeparator2.Size = new Size(177, 6);
         // 
         // إضافةبيعجديدToolStripMenuItem
         // 
         إضافةبيعجديدToolStripMenuItem.Name = "إضافةبيعجديدToolStripMenuItem";
-        إضافةبيعجديدToolStripMenuItem.Size = new Size(159, 22);
+        إضافةبيعجديدToolStripMenuItem.Size = new Size(180, 22);
         إضافةبيعجديدToolStripMenuItem.Text = "إضافة بيع جديد";
+        إضافةبيعجديدToolStripMenuItem.Click += إضافةبيعجديدToolStripMenuItem_Click;
         // 
         // إدارةالمبيعاتToolStripMenuItem
         // 
         إدارةالمبيعاتToolStripMenuItem.Name = "إدارةالمبيعاتToolStripMenuItem";
-        إدارةالمبيعاتToolStripMenuItem.Size = new Size(159, 22);
+        إدارةالمبيعاتToolStripMenuItem.Size = new Size(180, 22);
         إدارةالمبيعاتToolStripMenuItem.Text = "إدارة المبيعات";
         // 
         // المستخدمون

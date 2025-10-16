@@ -70,4 +70,12 @@ public partial class MainForm : Form
         Categories categories = new Categories();
         categories.ShowDialog();
     }
+
+    private void إضافةبيعجديدToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        OrdersForm form = new OrdersForm();
+        form.ShowDialog();
+    }
+
+
 }

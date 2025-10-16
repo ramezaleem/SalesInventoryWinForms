@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -199,8 +200,9 @@ namespace ProductManagementWindowsForms.PL
 
         private void priceTxtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            char decimalSeparator = Convert.ToChar(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
 
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != decimalSeparator)
             {
                 e.Handled = true;
             }

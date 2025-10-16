@@ -57,6 +57,15 @@ namespace ProductManagementWindowsForms.PL
         //    SetWidth(6, 144);
         //}
 
+        void CalculateAmount()
+        {
+            int price = int.TryParse(priceTxtBox.Text, out int p) ? p : 0;
+            int quantity = int.TryParse(quanitiyTxtBox.Text, out int q) ? q : 0;
+
+            int amount = price * quantity;
+            amountTxtBox.Text = amount.ToString();
+        }
+
 
         public OrdersForm()
         {
@@ -208,7 +217,32 @@ namespace ProductManagementWindowsForms.PL
             }
         }
 
+        private void priceTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && priceTxtBox.Text != string.Empty)
+            {
+                priceTxtBox.Focus();
+            }
+        }
 
+        private void quanitiyTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && quanitiyTxtBox.Text != string.Empty)
+            {
+                quanitiyTxtBox.Focus();
+            }
+        }
+
+        private void priceTxtBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalculateAmount();
+        }
+
+        private void quanitiyTxtBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalculateAmount();
+
+        }
 
 
 

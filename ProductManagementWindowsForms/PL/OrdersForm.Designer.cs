@@ -442,7 +442,9 @@
             quanitiyTxtBox.Size = new Size(91, 23);
             quanitiyTxtBox.TabIndex = 8;
             quanitiyTxtBox.TextAlign = HorizontalAlignment.Center;
+            quanitiyTxtBox.KeyDown += quanitiyTxtBox_KeyDown;
             quanitiyTxtBox.KeyPress += quanitiyTxtBox_KeyPress;
+            quanitiyTxtBox.KeyUp += quanitiyTxtBox_KeyUp;
             // 
             // label14
             // 
@@ -467,7 +469,9 @@
             priceTxtBox.Size = new Size(91, 23);
             priceTxtBox.TabIndex = 6;
             priceTxtBox.TextAlign = HorizontalAlignment.Center;
+            priceTxtBox.KeyDown += priceTxtBox_KeyDown;
             priceTxtBox.KeyPress += priceTxtBox_KeyPress;
+            priceTxtBox.KeyUp += priceTxtBox_KeyUp;
             // 
             // label13
             // 

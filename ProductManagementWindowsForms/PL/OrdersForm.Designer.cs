@@ -394,6 +394,7 @@
             discountTxtBox.Size = new Size(91, 23);
             discountTxtBox.TabIndex = 12;
             discountTxtBox.TextAlign = HorizontalAlignment.Center;
+            discountTxtBox.KeyUp += discountTxtBox_KeyUp;
             // 
             // label16
             // 

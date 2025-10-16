@@ -59,12 +59,33 @@ namespace ProductManagementWindowsForms.PL
 
         void CalculateAmount()
         {
-            int price = int.TryParse(priceTxtBox.Text, out int p) ? p : 0;
+            double price = double.TryParse(priceTxtBox.Text, out double p) ? p : 0;
             int quantity = int.TryParse(quanitiyTxtBox.Text, out int q) ? q : 0;
 
-            int amount = price * quantity;
+            double amount = price * quantity;
             amountTxtBox.Text = amount.ToString();
         }
+
+        void CalculateTotalAmount()
+        {
+            if (!string.IsNullOrWhiteSpace(discountTxtBox.Text) &&
+                !string.IsNullOrWhiteSpace(amountTxtBox.Text))
+            {
+                double amount = 0;
+                double discount = 0;
+
+                double.TryParse(amountTxtBox.Text, out amount);
+                double.TryParse(discountTxtBox.Text, out discount);
+
+                double totalAmount = amount - (amount * (discount / 100));
+                totalmountTxtBox.Text = totalAmount.ToString();
+            }
+            else
+            {
+                totalmountTxtBox.Text = "0";
+            }
+        }
+
 
 
         public OrdersForm()
@@ -236,14 +257,19 @@ namespace ProductManagementWindowsForms.PL
         private void priceTxtBox_KeyUp(object sender, KeyEventArgs e)
         {
             CalculateAmount();
+            CalculateTotalAmount();
         }
 
         private void quanitiyTxtBox_KeyUp(object sender, KeyEventArgs e)
         {
             CalculateAmount();
-
+            CalculateTotalAmount();
         }
 
+        private void discountTxtBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalculateTotalAmount();
+        }
 
 
     }

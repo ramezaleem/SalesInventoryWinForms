@@ -369,6 +369,7 @@
             totalmountTxtBox.ReadOnly = true;
             totalmountTxtBox.Size = new Size(144, 23);
             totalmountTxtBox.TabIndex = 14;
+            totalmountTxtBox.TextAlign = HorizontalAlignment.Center;
             // 
             // label17
             // 
@@ -388,9 +389,11 @@
             // 
             discountTxtBox.BorderStyle = BorderStyle.FixedSingle;
             discountTxtBox.Location = new Point(144, 67);
+            discountTxtBox.MaxLength = 3;
             discountTxtBox.Name = "discountTxtBox";
             discountTxtBox.Size = new Size(91, 23);
             discountTxtBox.TabIndex = 12;
+            discountTxtBox.TextAlign = HorizontalAlignment.Center;
             // 
             // label16
             // 
@@ -414,6 +417,7 @@
             amountTxtBox.ReadOnly = true;
             amountTxtBox.Size = new Size(91, 23);
             amountTxtBox.TabIndex = 10;
+            amountTxtBox.TextAlign = HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -433,9 +437,12 @@
             // 
             quanitiyTxtBox.BorderStyle = BorderStyle.FixedSingle;
             quanitiyTxtBox.Location = new Point(322, 67);
+            quanitiyTxtBox.MaxLength = 8;
             quanitiyTxtBox.Name = "quanitiyTxtBox";
             quanitiyTxtBox.Size = new Size(91, 23);
             quanitiyTxtBox.TabIndex = 8;
+            quanitiyTxtBox.TextAlign = HorizontalAlignment.Center;
+            quanitiyTxtBox.KeyPress += quanitiyTxtBox_KeyPress;
             // 
             // label14
             // 
@@ -455,9 +462,12 @@
             // 
             priceTxtBox.BorderStyle = BorderStyle.FixedSingle;
             priceTxtBox.Location = new Point(412, 67);
+            priceTxtBox.MaxLength = 8;
             priceTxtBox.Name = "priceTxtBox";
             priceTxtBox.Size = new Size(91, 23);
             priceTxtBox.TabIndex = 6;
+            priceTxtBox.TextAlign = HorizontalAlignment.Center;
+            priceTxtBox.KeyPress += priceTxtBox_KeyPress;
             // 
             // label13
             // 
@@ -481,6 +491,7 @@
             productNameTxtBox.ReadOnly = true;
             productNameTxtBox.Size = new Size(293, 23);
             productNameTxtBox.TabIndex = 4;
+            productNameTxtBox.TextAlign = HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -504,6 +515,7 @@
             productRefTxtBox.ReadOnly = true;
             productRefTxtBox.Size = new Size(91, 23);
             productRefTxtBox.TabIndex = 2;
+            productRefTxtBox.TextAlign = HorizontalAlignment.Center;
             productRefTxtBox.TextChanged += textBox1_TextChanged_1;
             // 
             // label11
@@ -526,6 +538,7 @@
             ordersListDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ordersListDataGridView.Location = new Point(0, 97);
             ordersListDataGridView.Name = "ordersListDataGridView";
+            ordersListDataGridView.ReadOnly = true;
             ordersListDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ordersListDataGridView.Size = new Size(1004, 171);
             ordersListDataGridView.TabIndex = 0;

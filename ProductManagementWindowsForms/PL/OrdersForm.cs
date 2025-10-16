@@ -186,7 +186,29 @@ namespace ProductManagementWindowsForms.PL
         {
             ProductsList form = new ProductsList();
             form.ShowDialog();
+            quanitiyTxtBox.Focus();
         }
+
+        private void quanitiyTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void priceTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
+
 
     }
 }

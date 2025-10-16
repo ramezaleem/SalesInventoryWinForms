@@ -30,52 +30,52 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdersForm));
             groupBox1 = new GroupBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox4 = new TextBox();
-            textBox2 = new TextBox();
+            dateOfOrder = new DateTimePicker();
+            salesmanName = new TextBox();
+            OrderDescTxtBox = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
+            orderNoTxtBox = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            pictureBox1 = new PictureBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
+            cutomerPicture = new PictureBox();
+            emailTxtBox = new TextBox();
+            telTxtBox = new TextBox();
+            lastNameTxtBox = new TextBox();
+            firstNameTxtBox = new TextBox();
             button1 = new Button();
-            textBox3 = new TextBox();
+            customerIdTxtBox = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label2 = new Label();
             groupBox3 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            button2 = new Button();
+            ordersListDataGridView = new DataGridView();
+            deleteSelectionRowBtn = new Button();
             label10 = new Label();
-            textBox9 = new TextBox();
-            button3 = new Button();
+            SumTxtBox = new TextBox();
+            addNewSaleBtn = new Button();
             button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            printSaleBtn = new Button();
+            saveNewSaleBtn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cutomerPicture).BeginInit();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ordersListDataGridView).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(dateOfOrder);
+            groupBox1.Controls.Add(salesmanName);
+            groupBox1.Controls.Add(OrderDescTxtBox);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(orderNoTxtBox);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(20, 12);
             groupBox1.Name = "groupBox1";
@@ -85,74 +85,74 @@
             groupBox1.Text = "بيانات الفاتورة :";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // dateTimePicker1
+            // dateOfOrder
             // 
-            dateTimePicker1.Location = new Point(79, 150);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(292, 23);
-            dateTimePicker1.TabIndex = 9;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            dateOfOrder.Location = new Point(67, 150);
+            dateOfOrder.Name = "dateOfOrder";
+            dateOfOrder.Size = new Size(292, 23);
+            dateOfOrder.TabIndex = 1;
+            dateOfOrder.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // textBox4
+            // salesmanName
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(79, 183);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(292, 23);
-            textBox4.TabIndex = 8;
+            salesmanName.BorderStyle = BorderStyle.FixedSingle;
+            salesmanName.Location = new Point(67, 183);
+            salesmanName.Name = "salesmanName";
+            salesmanName.ReadOnly = true;
+            salesmanName.Size = new Size(292, 23);
+            salesmanName.TabIndex = 8;
             // 
-            // textBox2
+            // OrderDescTxtBox
             // 
-            textBox2.Location = new Point(79, 67);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(292, 72);
-            textBox2.TabIndex = 6;
-            textBox2.TextChanged += textBox2_TextChanged;
+            OrderDescTxtBox.Location = new Point(67, 64);
+            OrderDescTxtBox.Multiline = true;
+            OrderDescTxtBox.Name = "OrderDescTxtBox";
+            OrderDescTxtBox.ScrollBars = ScrollBars.Vertical;
+            OrderDescTxtBox.Size = new Size(292, 72);
+            OrderDescTxtBox.TabIndex = 0;
+            OrderDescTxtBox.TextChanged += textBox2_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(386, 67);
+            label5.Location = new Point(372, 67);
             label5.Name = "label5";
-            label5.Size = new Size(78, 17);
+            label5.Size = new Size(92, 17);
             label5.TabIndex = 5;
-            label5.Text = "رقم الفاتورة :";
+            label5.Text = "وصف الفاتورة :";
             label5.Click += label5_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(386, 153);
+            label4.Location = new Point(396, 153);
             label4.Name = "label4";
-            label4.Size = new Size(78, 17);
+            label4.Size = new Size(68, 17);
             label4.TabIndex = 4;
-            label4.Text = "رقم الفاتورة :";
+            label4.Text = "تاريخ البيع :";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(386, 186);
+            label3.Location = new Point(396, 186);
             label3.Name = "label3";
-            label3.Size = new Size(78, 17);
+            label3.Size = new Size(68, 17);
             label3.TabIndex = 3;
-            label3.Text = "رقم الفاتورة :";
+            label3.Text = "اسم البائع :";
             label3.Click += label3_Click;
             // 
-            // textBox1
+            // orderNoTxtBox
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(187, 36);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(184, 23);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            orderNoTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            orderNoTxtBox.Location = new Point(175, 36);
+            orderNoTxtBox.Name = "orderNoTxtBox";
+            orderNoTxtBox.ReadOnly = true;
+            orderNoTxtBox.Size = new Size(184, 23);
+            orderNoTxtBox.TabIndex = 1;
+            orderNoTxtBox.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -167,13 +167,13 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(pictureBox1);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(textBox7);
-            groupBox2.Controls.Add(textBox6);
-            groupBox2.Controls.Add(textBox5);
+            groupBox2.Controls.Add(cutomerPicture);
+            groupBox2.Controls.Add(emailTxtBox);
+            groupBox2.Controls.Add(telTxtBox);
+            groupBox2.Controls.Add(lastNameTxtBox);
+            groupBox2.Controls.Add(firstNameTxtBox);
             groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(textBox3);
+            groupBox2.Controls.Add(customerIdTxtBox);
             groupBox2.Controls.Add(label9);
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(label7);
@@ -187,51 +187,52 @@
             groupBox2.Text = "بيانات العميل :";
             groupBox2.Enter += groupBox2_Enter;
             // 
-            // pictureBox1
+            // cutomerPicture
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 39);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(166, 170);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 19;
-            pictureBox1.TabStop = false;
+            cutomerPicture.BackgroundImage = (Image)resources.GetObject("cutomerPicture.BackgroundImage");
+            cutomerPicture.Image = (Image)resources.GetObject("cutomerPicture.Image");
+            cutomerPicture.Location = new Point(0, 39);
+            cutomerPicture.Name = "cutomerPicture";
+            cutomerPicture.Size = new Size(166, 170);
+            cutomerPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            cutomerPicture.TabIndex = 19;
+            cutomerPicture.TabStop = false;
             // 
-            // textBox8
+            // emailTxtBox
             // 
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(185, 186);
-            textBox8.Name = "textBox8";
-            textBox8.ReadOnly = true;
-            textBox8.Size = new Size(208, 23);
-            textBox8.TabIndex = 18;
+            emailTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            emailTxtBox.Location = new Point(185, 186);
+            emailTxtBox.Name = "emailTxtBox";
+            emailTxtBox.ReadOnly = true;
+            emailTxtBox.Size = new Size(208, 23);
+            emailTxtBox.TabIndex = 18;
             // 
-            // textBox7
+            // telTxtBox
             // 
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(185, 147);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(208, 23);
-            textBox7.TabIndex = 17;
+            telTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            telTxtBox.Location = new Point(185, 147);
+            telTxtBox.Name = "telTxtBox";
+            telTxtBox.ReadOnly = true;
+            telTxtBox.Size = new Size(208, 23);
+            telTxtBox.TabIndex = 17;
             // 
-            // textBox6
+            // lastNameTxtBox
             // 
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(185, 110);
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(208, 23);
-            textBox6.TabIndex = 16;
+            lastNameTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            lastNameTxtBox.Location = new Point(185, 110);
+            lastNameTxtBox.Name = "lastNameTxtBox";
+            lastNameTxtBox.ReadOnly = true;
+            lastNameTxtBox.Size = new Size(208, 23);
+            lastNameTxtBox.TabIndex = 16;
             // 
-            // textBox5
+            // firstNameTxtBox
             // 
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(185, 74);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(208, 23);
-            textBox5.TabIndex = 10;
+            firstNameTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            firstNameTxtBox.Location = new Point(185, 74);
+            firstNameTxtBox.Name = "firstNameTxtBox";
+            firstNameTxtBox.ReadOnly = true;
+            firstNameTxtBox.Size = new Size(208, 23);
+            firstNameTxtBox.TabIndex = 10;
             // 
             // button1
             // 
@@ -240,18 +241,19 @@
             button1.Location = new Point(185, 39);
             button1.Name = "button1";
             button1.Size = new Size(57, 23);
-            button1.TabIndex = 15;
+            button1.TabIndex = 0;
             button1.Text = "...";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // textBox3
+            // customerIdTxtBox
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(248, 39);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(145, 23);
-            textBox3.TabIndex = 10;
+            customerIdTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            customerIdTxtBox.Location = new Point(248, 39);
+            customerIdTxtBox.Name = "customerIdTxtBox";
+            customerIdTxtBox.ReadOnly = true;
+            customerIdTxtBox.Size = new Size(145, 23);
+            customerIdTxtBox.TabIndex = 10;
             // 
             // label9
             // 
@@ -305,7 +307,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dataGridView1);
+            groupBox3.Controls.Add(ordersListDataGridView);
             groupBox3.Location = new Point(20, 244);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(1004, 212);
@@ -313,24 +315,25 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "المنتجات :";
             // 
-            // dataGridView1
+            // ordersListDataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(1004, 184);
-            dataGridView1.TabIndex = 0;
+            ordersListDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ordersListDataGridView.Location = new Point(0, 22);
+            ordersListDataGridView.Name = "ordersListDataGridView";
+            ordersListDataGridView.ReadOnly = true;
+            ordersListDataGridView.Size = new Size(1004, 184);
+            ordersListDataGridView.TabIndex = 0;
             // 
-            // button2
+            // deleteSelectionRowBtn
             // 
-            button2.BackColor = Color.FromArgb(255, 192, 192);
-            button2.Location = new Point(20, 473);
-            button2.Name = "button2";
-            button2.Size = new Size(132, 23);
-            button2.TabIndex = 3;
-            button2.Text = "حذف السطر المحدد ";
-            button2.UseVisualStyleBackColor = false;
+            deleteSelectionRowBtn.BackColor = Color.FromArgb(255, 192, 192);
+            deleteSelectionRowBtn.Enabled = false;
+            deleteSelectionRowBtn.Location = new Point(20, 473);
+            deleteSelectionRowBtn.Name = "deleteSelectionRowBtn";
+            deleteSelectionRowBtn.Size = new Size(132, 23);
+            deleteSelectionRowBtn.TabIndex = 3;
+            deleteSelectionRowBtn.Text = "حذف السطر المحدد ";
+            deleteSelectionRowBtn.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -343,26 +346,27 @@
             label10.Text = "المجموع :";
             label10.Click += label10_Click;
             // 
-            // textBox9
+            // SumTxtBox
             // 
-            textBox9.BackColor = Color.FromArgb(192, 255, 255);
-            textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Location = new Point(816, 473);
-            textBox9.Name = "textBox9";
-            textBox9.ReadOnly = true;
-            textBox9.Size = new Size(208, 23);
-            textBox9.TabIndex = 20;
-            textBox9.TextChanged += textBox9_TextChanged;
+            SumTxtBox.BackColor = Color.FromArgb(192, 255, 255);
+            SumTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            SumTxtBox.Location = new Point(816, 473);
+            SumTxtBox.Name = "SumTxtBox";
+            SumTxtBox.ReadOnly = true;
+            SumTxtBox.Size = new Size(208, 23);
+            SumTxtBox.TabIndex = 20;
+            SumTxtBox.TextChanged += textBox9_TextChanged;
             // 
-            // button3
+            // addNewSaleBtn
             // 
-            button3.BackColor = Color.FromArgb(192, 255, 192);
-            button3.Location = new Point(267, 566);
-            button3.Name = "button3";
-            button3.Size = new Size(98, 33);
-            button3.TabIndex = 21;
-            button3.Text = "مبيعة جديدة";
-            button3.UseVisualStyleBackColor = false;
+            addNewSaleBtn.BackColor = Color.FromArgb(192, 255, 192);
+            addNewSaleBtn.Location = new Point(267, 566);
+            addNewSaleBtn.Name = "addNewSaleBtn";
+            addNewSaleBtn.Size = new Size(98, 33);
+            addNewSaleBtn.TabIndex = 21;
+            addNewSaleBtn.Text = "مبيعة جديدة";
+            addNewSaleBtn.UseVisualStyleBackColor = false;
+            addNewSaleBtn.Click += button3_Click;
             // 
             // button5
             // 
@@ -374,39 +378,43 @@
             button5.TabIndex = 23;
             button5.Text = "خروج";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
-            // button6
+            // printSaleBtn
             // 
-            button6.BackColor = Color.FromArgb(192, 192, 255);
-            button6.Location = new Point(531, 566);
-            button6.Name = "button6";
-            button6.Size = new Size(98, 33);
-            button6.TabIndex = 24;
-            button6.Text = "طباعة الفاتورة";
-            button6.UseVisualStyleBackColor = false;
+            printSaleBtn.BackColor = Color.FromArgb(192, 192, 255);
+            printSaleBtn.Enabled = false;
+            printSaleBtn.Location = new Point(531, 566);
+            printSaleBtn.Name = "printSaleBtn";
+            printSaleBtn.Size = new Size(98, 33);
+            printSaleBtn.TabIndex = 24;
+            printSaleBtn.Text = "طباعة الفاتورة";
+            printSaleBtn.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // saveNewSaleBtn
             // 
-            button7.BackColor = Color.FromArgb(255, 255, 192);
-            button7.Location = new Point(399, 566);
-            button7.Name = "button7";
-            button7.Size = new Size(98, 33);
-            button7.TabIndex = 25;
-            button7.Text = "حفظ المبيعة";
-            button7.UseVisualStyleBackColor = false;
+            saveNewSaleBtn.BackColor = Color.FromArgb(255, 255, 192);
+            saveNewSaleBtn.Enabled = false;
+            saveNewSaleBtn.Location = new Point(399, 566);
+            saveNewSaleBtn.Name = "saveNewSaleBtn";
+            saveNewSaleBtn.Size = new Size(98, 33);
+            saveNewSaleBtn.TabIndex = 25;
+            saveNewSaleBtn.Text = "حفظ المبيعة";
+            saveNewSaleBtn.UseVisualStyleBackColor = false;
             // 
             // OrdersForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1044, 627);
-            Controls.Add(button7);
-            Controls.Add(button6);
+            Controls.Add(saveNewSaleBtn);
+            Controls.Add(printSaleBtn);
             Controls.Add(button5);
-            Controls.Add(button3);
-            Controls.Add(textBox9);
+            Controls.Add(addNewSaleBtn);
+            Controls.Add(SumTxtBox);
             Controls.Add(label10);
-            Controls.Add(button2);
+            Controls.Add(deleteSelectionRowBtn);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -422,9 +430,9 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cutomerPicture).EndInit();
             groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ordersListDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -433,34 +441,34 @@
 
         private GroupBox groupBox1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox orderNoTxtBox;
         private Label label5;
         private Label label4;
         private Label label3;
-        private TextBox textBox2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox4;
+        private TextBox OrderDescTxtBox;
+        private DateTimePicker dateOfOrder;
+        private TextBox salesmanName;
         private GroupBox groupBox2;
         private Label label9;
         private Label label8;
         private Label label7;
         private Label label6;
         private Label label2;
-        private PictureBox pictureBox1;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private PictureBox cutomerPicture;
+        private TextBox emailTxtBox;
+        private TextBox telTxtBox;
+        private TextBox lastNameTxtBox;
+        private TextBox firstNameTxtBox;
         private Button button1;
-        private TextBox textBox3;
+        private TextBox customerIdTxtBox;
         private GroupBox groupBox3;
-        private DataGridView dataGridView1;
-        private Button button2;
+        private DataGridView ordersListDataGridView;
+        private Button deleteSelectionRowBtn;
         private Label label10;
-        private TextBox textBox9;
-        private Button button3;
+        private TextBox SumTxtBox;
+        private Button addNewSaleBtn;
         private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button printSaleBtn;
+        private Button saveNewSaleBtn;
     }
 }
